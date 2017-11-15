@@ -1,0 +1,9 @@
+{
+  "name": "HiVi",
+  "version": "1.0",
+  "description": "Offers multiple manners to view browser bookmarks and history.",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "logo_with_text.png"
+  }
+}
