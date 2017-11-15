@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HiVi - Scholarly Raport</title>
+    <link rel="stylesheet" href="schlarly.css">
+    <link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+    <header><p class="title">HiVi - Scholary Raport</p></header>
+    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>HiVi</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
+							<span property="schema:givenName">Denise</span>
+              <span property="schema:familyName">Goldan</span>
+            </a>
+            <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+            </sup>
+          </li>
+          <li property="schema:contributor" typeof="sa:ContributorRole">
+            <a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
+							<span property="schema:givenName">Cristina</span>
+              <span property="schema:familyName">Negruțu</span>
+            </a>
+            <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+          </li>
+        </ol>
+        <ol>
+          <a href="https://www.info.uaic.ro/bin/Main/">
+            <span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
+          </a>
+        </ol>
+      </section>
+      <section typeof="sa:Abstract" id="abstract">
+        <h2>Cuprins</h2>
+        <ol>
+          <li>Descriere</li>
+          <li>Design general</li>
+          <li>Manieră de interacțiune cu utilizatorul</li>
+          <li>Date</li>
+          <li>Versionare</li>
+          <li>Resurse</li>
+        </ol>
+      </section>
+      <section typeof="sa:MaterialsAndMethods" id="description">
+        <h2>Descriere</h2>
+    		<p><strong>HiVi</strong> este o extensie de browser Web capabilă să ofere
+           utilizatorului maniere multiple de vizualizare a adreselor Web
+           favorite. Generează reprezentări grafice ce pot fi exportate în
+           formatele PNG și SVG. Oferă suport pentru customizarea interfeței
+           cu utilizatorul.</p>
+			</section>
+			<section typeof="sa:MaterialsAndMethods">
+	      <h2>Design general</h2>
+				<figure typeof="sa:Image">
+					<img src="schita.png">
+					<figcaption>
+						 Schița
+					</figcaption>
+				</figure>
+      </section>
+			<section typeof="sa:MaterialsAndMethods">
+	      <h2>Versionare</h2>
+				<p>Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
+					<strong>SourceTree</strong> și aplicația <strong>GitHub for Windows</strong>
+					pentru a rezolva conflictele și pentru a face modicări/adăugări/ștergeri
+					a unui sau a mai multor fișiere	din cadrul repository-ului. Am ales să
+					atasăm fiecărui commit un mesaj scurt si clar.</p>
+			</section>
+			<section typeof="sa:ReferenceList" id="references">
+	      <h2>Resurse</h2>
+	      <dl>
+					<dt>Exemplu resurse</dt>
+	        <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
+	            resource="https://github.com/thujohn/twitter">
+	          <cite property="schema:name"><a
+	            href="https://github.com/thujohn/twitter">Twitter API for Laravel</a></cite>
+	        </dd>
+	      </dl>
+	    </section>
+		</article>
+  </body>
+</html>
