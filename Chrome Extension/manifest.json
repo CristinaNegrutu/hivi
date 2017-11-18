@@ -1,9 +1,19 @@
 {
-  "name": "HiVi",
+ 	"name": "HiVi",
   "version": "1.0",
   "description": "Offers multiple manners to view browser bookmarks and history.",
   "manifest_version": 2,
   "browser_action": {
-    "default_icon": "logo_with_text.png"
-  }
+	   "default_icon": "logo_with_text.png"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+      "assets/css/*",
+      "assets/js/*",
+      "assets/fonts/*"
+  ]
 }
