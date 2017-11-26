@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { MaterializeModule } from 'angular2-materialize';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 		SideMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+		MaterializeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
