@@ -1,13 +1,13 @@
-.horizontal-filter-group{
-  padding-top: 20px;
-  padding-bottom: 20px;
+.horizontal-filter-group {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-.horizontal-filter{
+.horizontal-filter {
 
   box-shadow: 1px 4px 4px #888888;
 }
 
-.settings-button{
-  padding-bottom: 20px;
+.settings-button {
+  padding-bottom: 1em;
 }

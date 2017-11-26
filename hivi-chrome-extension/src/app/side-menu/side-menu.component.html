@@ -1,13 +1,18 @@
-<div>
-	<ul id="slide-out" class="side-nav fixed">
-		<li><a href="#!">Line Chart Link</a></li>
-		<li><a href="#!">Pie Chart Link</a></li>
-		<li><a href="#!">Bar Chart Link</a></li>
-	</ul>
-	<a href="#" data-activates="slide-out" class="button-collapse show-on-large" (click)="showSideMenu()">
-		<i class="material-icons">menu</i>
-	</a>
-</div>
+<ul id="slide-out" class="side-nav fixed">
+  <div class="side-menu-icons">
+  <ul class="logo-with-text">
+    <li ><img [src]="logo" class="responsive-img "/>
+    </li>
+  </ul>
+  <li><a href="#"><i class="large material-icons">list</i></a></li>
+  <li><a href="#"><i class="large material-icons">insert_chart</i></a></li>
+  <li><a href="#"><i class="large material-icons">pie_chart</i></a></li>
+
+  </div>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse show-on-large" (click)="showSideMenu()">
+  <i class="material-icons">menu</i>
+</a>
 <script type="text/javascript">
 $(".button-collapse").sideNav();
 </script>

@@ -12,6 +12,8 @@ export class SideMenuComponent implements OnInit {
 
 	constructor(private elementRef:ElementRef) {}
 
+  private logo = require("./assets/logo_with_text.png");
+
 	ngOnInit(): void {
 
 	}

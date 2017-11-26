@@ -1,9 +1,26 @@
 header, main, footer {
-	padding-left: 300px;
+  padding-left: 300px;
 }
 
-@media only screen and (max-width : 992px) {
-	header, main, footer {
-		padding-left: 0;
-	}
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+.side-menu-icons {
+  padding-left: 1em;
+}
+
+.side-menu-icons > li {
+  padding-bottom: 3em;
+}
+
+.logo-with-text {
+  padding-left: 1em;
+}
+
+.side-nav{
+  width: 11em;
+
 }
