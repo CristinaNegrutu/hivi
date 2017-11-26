@@ -9,15 +9,17 @@ declare var jQuery: any;
 })
 export class SideMenuComponent implements OnInit {
 
-	constructor() {}
+  private logo = require("./assets/logo_with_text.png");
+
+  constructor() {}
 
 	ngOnInit(): void {
 
 	}
 
 	showSideMenu(): void {
-		$(".button-collapse").sideNav();
-		$('.button-collapse').sideNav('show');
+    jQuery(".button-collapse").sideNav();
+    jQuery('.button-collapse').sideNav('show');
 		console.log("Menu button has been pressed.")
 	}
 
