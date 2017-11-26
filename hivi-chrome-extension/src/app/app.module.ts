@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ViewsParentComponent } from './views/views-parent.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+		ViewsParentComponent
   ],
   imports: [
     BrowserModule

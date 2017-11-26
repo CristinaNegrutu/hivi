@@ -1,0 +1,10 @@
+body {
+  background-color: #5D8AA8!important;
+
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+}
