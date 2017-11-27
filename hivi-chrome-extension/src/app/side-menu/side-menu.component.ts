@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var jQuery: any;
+declare var require: any
+
 
 @Component({
 	selector: 'side-menu',
