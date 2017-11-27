@@ -1,18 +1,32 @@
-<ul id="slide-out" class="side-nav fixed">
-  <div class="side-menu-icons">
-  <ul class="logo-with-text">
-    <li ><img [src]="logo" class="responsive-img "/>
-    </li>
-  </ul>
-  <li><a href="#"><i class="large material-icons">list</i></a></li>
-  <li><a href="#"><i class="large material-icons">insert_chart</i></a></li>
-  <li><a href="#"><i class="large material-icons">pie_chart</i></a></li>
-
-  </div>
+<ul id="slide-out" class="side-nav fixed grey lighten-3">
+	<div class="side-menu-icons">
+		<ul class="logo-with-text">
+			<li ><img [src]="logo" class="responsive-img"/>
+			</li>
+		</ul>
+		<li (click)="displayListView()">
+			<a class="menu-button">
+				<i class="medium material-icons">list</i>
+			</a>
+		</li>
+		<li (click)="displayBarChart()">
+			<a class="menu-button">
+				<i class="medium material-icons">insert_chart</i>
+			</a>
+		</li>
+		<li (click)="displayPieChart()">
+			<a class="menu-button">
+				<i class="medium material-icons">pie_chart</i>
+			</a>
+		</li>
+		<button class="btn waves-effect waves-light" type="submit" name="action">Export
+    <i class="material-icons right">send</i>
+  </button>
+	</div>
 </ul>
-<a href="#" data-activates="slide-out" class="button-collapse show-on-large" (click)="showSideMenu()">
-  <i class="material-icons">menu</i>
+<a href="#" data-activates="slide-out" class="a-collapse show-on-large" (click)="showSideMenu()">
+	<i class="material-icons">menu</i>
 </a>
 <script type="text/javascript">
-$(".button-collapse").sideNav();
+$(".a-collapse").sideNav();
 </script>

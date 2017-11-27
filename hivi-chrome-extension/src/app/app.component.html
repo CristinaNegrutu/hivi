@@ -1,17 +1,21 @@
 <div>
-
-  <div class="row">
-    <div class="col s1">
-      <side-menu></side-menu>
-    </div>
-    <div class="col s10 offset-s1">
-      <data-filters></data-filters>
-      <main-content></main-content>
-			<pie-chart></pie-chart>
-			<bar-chart></bar-chart>
-    </div>
-
-  </div>
-
+	<div class="row">
+		<div class="col s1">
+			<side-menu (notify)="notify($event)"></side-menu>
+		</div>
+		<div class="col s10 offset-s1">
+			<data-filters></data-filters>
+			<main-content></main-content>
+			<div *ngIf="whatToDisplay=='pie'">
+				<pie-chart></pie-chart>
+			</div>
+			<!-- <div *ngIf="whatToDisplay=='line'">
+				<line-view></line-view>
+			</div> -->
+			<div *ngIf="whatToDisplay=='bar'">
+				<bar-chart></bar-chart>
+			</div>
+		</div>
+	</div>
 </div>
 <router-outlet></router-outlet>
