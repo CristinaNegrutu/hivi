@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+// import * as $ from 'jquery';
 
 declare var jQuery: any;
-declare var require: any
+declare var require: any;
 
 
 @Component({
@@ -11,17 +12,17 @@ declare var require: any
 })
 export class SideMenuComponent implements OnInit {
 
-  private logo = require("./assets/logo_with_text.png");
+	constructor(private elementRef:ElementRef) {}
 
-  constructor() {}
+  private logo = require("./assets/logo_with_text.png");
 
 	ngOnInit(): void {
 
 	}
 
 	showSideMenu(): void {
-    jQuery(".button-collapse").sideNav();
-    jQuery('.button-collapse').sideNav('show');
+		jQuery(this.elementRef.nativeElement).find('.button-collapse').sideNav();
+		jQuery(this.elementRef.nativeElement).find('.button-collapse').sideNav('show');
 		console.log("Menu button has been pressed.")
 	}
 
