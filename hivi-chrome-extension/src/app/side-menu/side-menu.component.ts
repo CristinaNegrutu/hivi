@@ -3,6 +3,7 @@ import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
 declare var jQuery: any;
 declare var require: any;
 
+
 @Component({
 	selector: 'side-menu',
 	templateUrl: './side-menu.component.html',

@@ -1,34 +1,60 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { ChartsModule } from 'ng2-charts';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import { DataFiltersComponent } from './data-filters/data-filters.component';
-import { MainContentComponent } from './main-content/main-content.component';
-import { MaterializeModule } from 'angular2-materialize';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
-import { BarChartComponent } from './bar-chart/bar-chart.component'
+import {NgModule} from '@angular/core';
+import {ChartsModule} from 'ng2-charts';
 
-import { HiviService } from './hivi.service';
+import {AppComponent} from './app.component';
+import {SideMenuComponent} from './side-menu/side-menu.component';
+import {DataFiltersComponent} from './data-filters/data-filters.component';
+import {MainContentComponent} from './main-content/main-content.component';
+import {MaterializeModule} from 'angular2-materialize';
+import {PieChartComponent} from './pie-chart/pie-chart.component';
+import {BarChartComponent} from './bar-chart/bar-chart.component'
+import {SettingsComponent} from './settings/settings.component'
+import {RouterModule, Routes} from '@angular/router'
+
+import {HiviService} from './hivi.service';
+
+
+const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },
+  {
+    path: 'settings',
+    component: SettingsComponent
+  },
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-		SideMenuComponent,
+    SideMenuComponent,
     DataFiltersComponent,
     MainContentComponent,
-		PieChartComponent,
-		BarChartComponent
+    PieChartComponent,
+    BarChartComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
     ChartsModule,
-		MaterializeModule
+    MaterializeModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: true} // <-- debugging purposes only
+    )
   ],
   providers: [
-		HiviService
-	],
+    HiviService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+
+
