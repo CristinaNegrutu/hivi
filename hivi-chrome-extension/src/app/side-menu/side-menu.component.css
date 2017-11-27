@@ -8,19 +8,21 @@ header, main, footer {
   }
 }
 
-.side-menu-icons {
-  padding-left: 1em;
-}
-
 .side-menu-icons > li {
   padding-bottom: 3em;
 }
 
 .logo-with-text {
-  padding-left: 1em;
+	width: 90%;
+	padding-left: 1em;
+	padding-top: 0.5em;
 }
 
-.side-nav{
-  width: 11em;
+.side-nav {
+  width: 8em;
+}
 
+.menu-button {
+	padding-top: 2em;
+	padding-bottom: 6em;
 }
