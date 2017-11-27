@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+
 import {NgModule} from '@angular/core';
 import {ChartsModule} from 'ng2-charts';
 
@@ -16,12 +17,16 @@ import {HiviService} from './hivi.service';
 
 
 const appRoutes: Routes = [
-  {path: 'settings', component: SettingsComponent},
-  { path: '',
+  {
+    path: '',
     redirectTo: '/',
     pathMatch: 'full'
   },
-  // { path: '**', component: PageNotFoundComponent }
+  {
+    path: 'settings',
+    component: SettingsComponent
+  },
+
 ];
 
 @NgModule({
@@ -32,7 +37,7 @@ const appRoutes: Routes = [
     MainContentComponent,
     PieChartComponent,
     BarChartComponent,
-    SettingsComponent
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
