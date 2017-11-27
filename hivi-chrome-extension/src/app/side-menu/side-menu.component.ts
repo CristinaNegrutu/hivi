@@ -36,4 +36,8 @@ export class SideMenuComponent {
 		console.log("Pressed the bar button.");
 	}
 
+	export(): void {
+		console.log("Export button has been presses");
+	}
+
 }

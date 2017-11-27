@@ -8,14 +8,11 @@ header, main, footer {
   }
 }
 
-.side-menu-icons > li {
-  padding-bottom: 3em;
-}
-
 .logo-with-text {
 	width: 90%;
 	padding-left: 1em;
 	padding-top: 0.5em;
+	margin-bottom: 3em;
 }
 
 .side-nav {
@@ -25,4 +22,16 @@ header, main, footer {
 .menu-button {
 	padding-top: 2em;
 	padding-bottom: 6em;
+}
+
+.export-button {
+	margin-top: 6em;
+}
+
+.view:hover {
+  background-color: #e0e0e0 ;
+}
+
+.view:link {
+  background-color: #e0e0e0 ;
 }

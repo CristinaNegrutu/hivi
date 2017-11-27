@@ -1,27 +1,31 @@
-<ul id="slide-out" class="side-nav fixed grey lighten-3">
-	<div class="side-menu-icons">
+<ul id="slide-out" class="side-nav fixed grey lighten-2">
+	<div class="side-menu-icons nav-wrapper">
 		<ul class="logo-with-text">
 			<li ><img [src]="logo" class="responsive-img"/>
 			</li>
 		</ul>
-		<li (click)="displayListView()">
+		<li class="view" (click)="displayListView()">
 			<a class="menu-button">
 				<i class="medium material-icons">list</i>
 			</a>
 		</li>
-		<li (click)="displayBarChart()">
+		<li class="view" (click)="displayBarChart()">
 			<a class="menu-button">
 				<i class="medium material-icons">insert_chart</i>
 			</a>
 		</li>
-		<li (click)="displayPieChart()">
+		<li class="view" (click)="displayPieChart()">
 			<a class="menu-button">
 				<i class="medium material-icons">pie_chart</i>
 			</a>
 		</li>
-		<button class="btn waves-effect waves-light" type="submit" name="action">Export
-    <i class="material-icons right">send</i>
-  </button>
+		<li>
+			<div class="center-align">
+				<a class="btn-floating btn-large teal darken-2 export-button">
+					<i class="material-icons">save</i>
+				</a>
+			</div>
+		</li>
 	</div>
 </ul>
 <a href="#" data-activates="slide-out" class="a-collapse show-on-large" (click)="showSideMenu()">
