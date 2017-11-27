@@ -10,6 +10,7 @@ import {MainContentComponent} from './main-content/main-content.component';
 import {MaterializeModule} from 'angular2-materialize';
 import {PieChartComponent} from './pie-chart/pie-chart.component';
 import {BarChartComponent} from './bar-chart/bar-chart.component'
+import {ListViewComponent} from './list-view/list-view.component'
 import {SettingsComponent} from './settings/settings.component'
 import {RouterModule, Routes} from '@angular/router'
 
@@ -38,6 +39,7 @@ const appRoutes: Routes = [
     PieChartComponent,
     BarChartComponent,
     SettingsComponent,
+    ListViewComponent
   ],
   imports: [
     BrowserModule,
