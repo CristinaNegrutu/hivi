@@ -1,60 +1,37 @@
-import {BrowserModule} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
+import { ViewsModule } from './views/views.module';
+import { SettingsModule } from './settings/settings.module';
+import { MaterializeModule } from 'angular2-materialize';
 
-import {NgModule} from '@angular/core';
-import {ChartsModule} from 'ng2-charts';
-
-import {AppComponent} from './app.component';
-import {SideMenuComponent} from './side-menu/side-menu.component';
-import {DataFiltersComponent} from './data-filters/data-filters.component';
-import {MainContentComponent} from './main-content/main-content.component';
-import {MaterializeModule} from 'angular2-materialize';
-import {PieChartComponent} from './pie-chart/pie-chart.component';
-import {BarChartComponent} from './bar-chart/bar-chart.component'
-import {SettingsComponent} from './settings/settings.component'
-import {RouterModule, Routes} from '@angular/router'
-
-import {HiviService} from './hivi.service';
-
+import { AppComponent } from './app.component';
+import { ViewsComponent } from './views/views.component';
+import { RouterModule, Routes } from '@angular/router'
 
 const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: '/',
-    pathMatch: 'full'
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent
-  },
-
+  // {
+  //   path: '',
+  //   redirectTo: '/views',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideMenuComponent,
-    DataFiltersComponent,
-    MainContentComponent,
-    PieChartComponent,
-    BarChartComponent,
-    SettingsComponent,
   ],
   imports: [
+
+		ViewsModule,
+		SettingsModule,
+
     BrowserModule,
     ChartsModule,
     MaterializeModule,
-    RouterModule.forRoot(
-      appRoutes,
-      {enableTracing: true} // <-- debugging purposes only
-    )
-  ],
-  providers: [
-    HiviService
-  ],
+    RouterModule.forRoot(appRoutes)],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
-
-
-
