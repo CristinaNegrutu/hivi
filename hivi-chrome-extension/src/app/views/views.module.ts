@@ -7,21 +7,22 @@ import { ViewsComponent } from './views.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { DataFiltersComponent } from './data-filters/data-filters.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { ListViewComponent } from './list-view/list-view.component';
 import { MaterializeModule } from 'angular2-materialize';
-import { BarChartComponent } from './bar-chart/bar-chart.component'
 import { RouterModule, Routes } from '@angular/router'
 
 import { HiviService } from './hivi.service';
 
 const appRoutes: Routes = [
-  {
-    path: '**',
-    redirectTo: '/settings'
-	},
+  // {
+  //   path: '**',
+  //   redirectTo: '/settings'
+	// },
   {
     path: 'views',
     component: ViewsComponent
-  },
+  }
 ];
 
 @NgModule({
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     DataFiltersComponent,
     PieChartComponent,
     BarChartComponent,
+		ListViewComponent,
 		ViewsComponent
   ],
   imports: [
