@@ -16,12 +16,11 @@ const appRoutes: Routes = [
     redirectTo: '/views',
     pathMatch: 'full'
   },
-	{
-    path: '**',
-    redirectTo: '/page-not-found',
-    pathMatch: 'full'
-  }
-
+	// {
+  //   path: '**',
+  //   redirectTo: '/page-not-found',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({

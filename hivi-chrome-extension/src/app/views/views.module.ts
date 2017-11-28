@@ -15,10 +15,6 @@ import { RouterModule, Routes } from '@angular/router'
 import { HiviService } from './hivi.service';
 
 const appRoutes: Routes = [
-  // {
-  //   path: '**',
-  //   redirectTo: '/settings'
-	// },
   {
     path: 'views',
     component: ViewsComponent

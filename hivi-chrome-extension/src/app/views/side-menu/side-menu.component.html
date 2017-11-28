@@ -1,4 +1,4 @@
-<ul id="slide-out" class="side-nav fixed grey lighten-2">
+<ul id="slide-out" class="side-nav fixed">
 	<div class="side-menu-icons nav-wrapper">
 		<ul class="logo-with-text">
 			<li ><img [src]="logo" class="responsive-img"/>
@@ -28,9 +28,10 @@
 		</li>
 	</div>
 </ul>
-<a href="#" data-activates="slide-out" class="a-collapse show-on-large" (click)="showSideMenu()">
+<a data-activates="slide-out" class="a-collapse show-on-large" (click)="showSideMenu()">
 	<i class="material-icons">menu</i>
 </a>
+
 <script type="text/javascript">
 $(".a-collapse").sideNav();
 </script>
