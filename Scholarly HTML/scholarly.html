@@ -109,10 +109,32 @@
 				</figure>
 
       </section>
+
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Maniera de interactiune cu utilizatorul</h2>
+			<p>Utilizatorul va putea alege sa vizualizeze datele provenite din marcaje in diverse maniere, punand la
+				dispozitia acestuia posibilitatea de a filtra dupa perioada in care au fost adaugate. </p>
+			<p>Optiunile disponibile pentru vizualizarea datelor sunt: lista, pie-chart si bar-chart. </p>
+			<p> In modul lista, datele pot fi consultate sub forma arborescenta data de structura de fisiere
+			in care utilizatorul a salvat marcajele. </p>
+			<p> In modul pie-chart, marcajele sunt distribuite in functie de numarul de marcaje de pe fiecare domeniu accesat.
+			De exemplu, daca utilizatorul are mai multe marcaje pe "Youtube", portiunea corespunzatoare acestui domeniu va fi mai mare
+				decat portiunea pentru un alt domeniu la care utilizatorul are un singur marcaj.
+			</p>
+			<p>In mod analog, datele sunt distribuite dupa frecventa marcajelor si in versiunea bar-chart. </p>
+
+			<p>Prin intermediul butonului de setari aflat in dreapta-sus, utilizatorului ii este pusa la dispozitie
+				posibilitatea de a alege o serie de link-uri sau domenii care sa fie excluse din grafice. De asemenea,
+				acesta poate alege intre doua teme cromatice, una cu nuante mai deschise si una cu nuante intunecate
+				pentru configurarea aplicatiei.</p>
+			<p>Butonul de "Export" permite utilizatorului sa exporte in format SVG sau PNG graficele rezultate.</p>
+			<p> Filtrele din partea de sus au rolul de a filtra marcajele dupa perioada in care au fost adaugate.</p>
+		</section>
+
 			<section typeof="sa:MaterialsAndMethods">
 	      <h2>Versionare</h2>
 				<p>Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
-					<strong>SourceTree</strong> și aplicația <strong>GitHub for Windows</strong>
+					utilitarul Git din terminal
 					pentru a rezolva conflictele și pentru a face modicări/adăugări/ștergeri
 					a unui sau a mai multor fișiere	din cadrul repository-ului. Am ales să
 					atasăm fiecărui commit un mesaj scurt si clar.</p>
@@ -120,11 +142,11 @@
 			<section typeof="sa:ReferenceList" id="references">
 	      <h2>Resurse</h2>
 	      <dl>
-					<dt>Exemplu resurse</dt>
+					<dt>Chrome API</dt>
 	        <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
-	            resource="https://github.com/thujohn/twitter">
+	            resource="https://developer.chrome.com/extensions/bookmarks">
 	          <cite property="schema:name"><a
-	            href="https://github.com/thujohn/twitter">Twitter API for Laravel</a></cite>
+	            href="https://developer.chrome.com/extensions/bookmarks">Chrome API for Javascript</a></cite>
 	        </dd>
 	      </dl>
 	    </section>
