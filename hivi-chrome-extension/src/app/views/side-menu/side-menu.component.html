@@ -1,37 +1,30 @@
 <ul id="slide-out" class="side-nav fixed">
-	<div class="side-menu-icons nav-wrapper">
-		<ul class="logo-with-text">
-			<li ><img [src]="logo" class="responsive-img"/>
-			</li>
-		</ul>
-		<li class="view" (click)="displayListView()">
-			<a class="menu-button">
-				<i class="medium material-icons">list</i>
-			</a>
-		</li>
-		<li class="view" (click)="displayBarChart()">
-			<a class="menu-button">
-				<i class="medium material-icons">insert_chart</i>
-			</a>
-		</li>
-		<li class="view" (click)="displayPieChart()">
-			<a class="menu-button">
-				<i class="medium material-icons">pie_chart</i>
-			</a>
-		</li>
-		<li>
-			<div class="center-align">
-				<a class="btn-floating btn-large teal darken-2 export-button">
-					<i class="material-icons">save</i>
-				</a>
-			</div>
-		</li>
-	</div>
+  <div class="side-menu-icons nav-wrapper">
+    <ul class="logo-with-text">
+      <li><img [src]="logo" class="responsive-img"/>
+      </li>
+    </ul>
+    <li class="view" (click)="displayListView()">
+      <a class="menu-button">
+        <i class="medium material-icons">list</i>
+      </a>
+    </li>
+    <li class="view" (click)="displayBarChart()">
+      <a class="menu-button">
+        <i class="medium material-icons">insert_chart</i>
+      </a>
+    </li>
+    <li class="view" (click)="displayPieChart()">
+      <a class="menu-button">
+        <i class="medium material-icons">pie_chart</i>
+      </a>
+    </li>
+  </div>
 </ul>
 <a data-activates="slide-out" class="a-collapse show-on-large" (click)="showSideMenu()">
-	<i class="material-icons">menu</i>
+  <i class="material-icons">menu</i>
 </a>
 
 <script type="text/javascript">
-$(".a-collapse").sideNav();
+  $(".a-collapse").sideNav();
 </script>
