@@ -10,11 +10,11 @@ import { ViewsComponent } from './views/views.component';
 import { RouterModule, Routes } from '@angular/router'
 
 const appRoutes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/views',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '',
+    redirectTo: '/views',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
