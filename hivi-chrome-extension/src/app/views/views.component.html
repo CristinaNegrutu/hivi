@@ -16,7 +16,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="fixed-action-btn">
+	<div *ngIf="whatToDisplay=='pie' || whatToDisplay=='bar'" class="fixed-action-btn">
 		<a class="btn-floating btn-large teal darken-2 export-button">
 			<i class="material-icons">save</i>
 		</a>
