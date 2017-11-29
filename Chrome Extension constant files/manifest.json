@@ -4,7 +4,7 @@
   "description": "Offers multiple manners to view browser bookmarks and history.",
   "manifest_version": 2,
   "browser_action": {
-	   "default_icon": "logo_with_text.png"
+	   "default_icon": "logo_with_no_name.png"
   },
   "permissions": ["tabs"],
   "background": {
