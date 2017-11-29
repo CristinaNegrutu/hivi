@@ -16,5 +16,14 @@
 			</div>
 		</div>
 	</div>
-</div>
-<router-outlet></router-outlet>
+	<div class="fixed-action-btn">
+		<a class="btn-floating btn-large teal darken-2 export-button">
+			<i class="material-icons">save</i>
+		</a>
+		<ul>
+			<a class="export-button btn-floating green darken-1" (click)="downloadCanvasAsPNG($event)">PNG</a>
+			<a class="export-button btn-floating blue darken-1" (click)="downloadCanvasAsSVG($event)">SVG</a>
+		</ul>
+		</div>
+	</div>
+	<router-outlet></router-outlet>
