@@ -1,29 +1,34 @@
 <div>
-	<div class="row">
-		<div class="col s1">
-			<side-menu (notify)="notify($event)"></side-menu>
-		</div>
-		<div class="col s10 offset-s1">
-			<data-filters></data-filters>
-			<div *ngIf="whatToDisplay=='pie'">
-				<pie-chart></pie-chart>
-			</div>
-			<div *ngIf="whatToDisplay=='list'">
-				<list-view></list-view>
-			</div>
-			<div *ngIf="whatToDisplay=='bar'">
-				<bar-chart></bar-chart>
-			</div>
-		</div>
-	</div>
-	<div class="fixed-action-btn">
-		<a class="btn-floating btn-large teal darken-2 export-button">
-			<i class="material-icons">save</i>
-		</a>
-		<ul>
-			<a class="export-button btn-floating green darken-1" (click)="downloadCanvasAsPNG($event)">PNG</a>
-			<a class="export-button btn-floating blue darken-1" (click)="downloadCanvasAsSVG($event)">SVG</a>
-		</ul>
-		</div>
-	</div>
-	<router-outlet></router-outlet>
+  <div class="row">
+    <div class="col s1">
+      <side-menu (notify)="notify($event)"></side-menu>
+    </div>
+    <div class="col s10 offset-s1">
+      <data-filters></data-filters>
+      <div class="col s10">
+
+        <div *ngIf="whatToDisplay=='pie'">
+          <pie-chart></pie-chart>
+
+        </div>
+        <div *ngIf="whatToDisplay=='list'">
+          <list-view></list-view>
+        </div>
+        <div *ngIf="whatToDisplay=='bar'">
+          <bar-chart></bar-chart>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large teal darken-2 export-button">
+      <i class="material-icons">save</i>
+    </a>
+    <ul>
+      <a class="export-button btn-floating green darken-1" (click)="downloadCanvasAsPNG($event)">PNG</a>
+      <a class="export-button btn-floating blue darken-1" (click)="downloadCanvasAsSVG($event)">SVG</a>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>
