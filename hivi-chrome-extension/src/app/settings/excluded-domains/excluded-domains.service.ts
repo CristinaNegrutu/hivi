@@ -19,20 +19,27 @@ export class ExcludedDomainsService {
 	}
 
 	addDomainToList(domainName: string) {
+		var alreadyAdded = this.domainNameInExcludedDomains(domainName);
 		domainName = domainName.toLowerCase();
-		if (domainName != "" && domainName !== null) {
-			this.excludedDomains.push({name: domainName});
+		if (alreadyAdded == false){
+			if (domainName != "" && domainName !== null) {
+				this.excludedDomains.push({name: domainName});
+			}
 		}
-		//TODO: Must check that value hasn't already been added
-		console.log(domainName);
-		console.log(this.excludedDomains);
-		console.log("Pressed ENTER in order to add domain to list.");
 	}
 
 	deleteDomainFromList(domainName: string, index: number) {
 		this.excludedDomains.splice(index, 1);
-		console.log(this.excludedDomains);
-		console.log("Pressed delete button in order to remove a domain from list.");
+	}
+
+	domainNameInExcludedDomains(domainName: string): boolean {
+		var length = this.excludedDomains.length;
+		for (var i = 0; i < length; i++) {
+			if (this.excludedDomains[i].name === domainName) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 }
