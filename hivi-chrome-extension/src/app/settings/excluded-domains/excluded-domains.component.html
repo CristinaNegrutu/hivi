@@ -1,0 +1,39 @@
+<div class="row" xmlns="http://www.w3.org/1999/html">
+	<div class="col s8  offset-s2">
+		<div class="card center-align">
+			<div class="card-content ">
+				<h5>Choose what domains to exclude from the views</h5>
+				<div class="row">
+					<div class="col s12 offset-s2">
+						<div class="row">
+							<div class="input-field col s6">
+								<input id="name" #box (keyup.enter)="addDomainToList(box.value)" placeholder ="Type domains that you don't want to see in the views">
+							</div>
+							<div class="input-field col s2">
+								<button class="btn waves-effect waves-light" (click)="addDomainToList(box.value)"
+								name="action">Add</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s6">
+								<table class="responsive-table">
+									<thead><th><h5>List of excluded domains</h5></th></thead>
+									<tbody>
+										<div *ngFor="let domain of excludedDomains; let i = index">
+											<tr>
+												<td>
+													<a (click)="deleteDomainFromList(domain.name, index)" class="btn-floating  waves-effect waves-light"><i class="material-icons">remove</i></a>
+												</td>
+												<td><strong>{{domain.name}}</strong></td>
+											</tr>
+										</div>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
