@@ -6,7 +6,10 @@
   "browser_action": {
 	   "default_icon": "logo_with_no_name.png"
   },
-  "permissions": ["tabs"],
+  "permissions": [
+    "tabs",
+    "bookmarks"
+  ],
   "background": {
     "scripts": ["background.js"]
   },
