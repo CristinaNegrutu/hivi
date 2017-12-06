@@ -1,14 +1,14 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {ChartsModule} from 'ng2-charts';
-import {ViewsModule} from './views/views.module';
-import {SettingsModule} from './settings/settings.module';
-import {NotFoundModule} from './not-found/not-found.module';
-import {MaterializeModule} from 'angular2-materialize';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts';
+import { ViewsModule } from './views/views.module';
+import { SettingsModule } from './settings/settings.module';
+import { NotFoundModule } from './not-found/not-found.module';
+import { MaterializeModule } from 'angular2-materialize';
 
-import {AppComponent} from './app.component';
-import {ViewsComponent} from './views/views.component';
-import {RouterModule, Routes} from '@angular/router'
+import { AppComponent } from './app.component';
+import { ViewsComponent } from './views/views.component';
+import { RouterModule, Routes } from '@angular/router'
 
 const appRoutes: Routes = [
   {
@@ -21,7 +21,6 @@ const appRoutes: Routes = [
     redirectTo: '/page-not-found',
     pathMatch: 'full'
   }
-
 ];
 
 @NgModule({
@@ -29,11 +28,9 @@ const appRoutes: Routes = [
     AppComponent,
   ],
   imports: [
-
     ViewsModule,
     SettingsModule,
     NotFoundModule,
-
     BrowserModule,
     ChartsModule,
     MaterializeModule,
