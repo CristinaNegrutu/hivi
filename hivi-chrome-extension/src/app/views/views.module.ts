@@ -5,7 +5,7 @@ import { ChartsModule } from 'ng2-charts';
 
 import { ViewsComponent } from './views.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
-import { DataFiltersComponent } from './data-filters/data-filters.component';
+import { DateFilterComponent } from './date-filter/date-filter.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { ListViewComponent } from './list-view/list-view.component';
@@ -24,11 +24,11 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     SideMenuComponent,
-    DataFiltersComponent,
+    DateFilterComponent,
     PieChartComponent,
     BarChartComponent,
 		ListViewComponent,
-		ViewsComponent
+		ViewsComponent,
   ],
   imports: [
     BrowserModule,

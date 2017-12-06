@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 export class ViewsComponent {
 
 	whatToDisplay: string = "pie";
+	selectedFilter: string = "TODAY";
 
-	notify(message):void {
-		this.whatToDisplay = message;
+	updateAfterSideMenuSelectionChanged(sideMenuSelectionValue): void {
+		this.whatToDisplay = sideMenuSelectionValue;
+		console.log("ViewsComponent: what to display = "+ this.whatToDisplay);
+	}
+
+	updateAfterDateFilterValueChanged(dateFilterValue): void {
+		this.selectedFilter = dateFilterValue;
+		console.log("ViewsComponent: selected filter = "+ this.selectedFilter);
 	}
 
 	downloadCanvasAsPNG(event) {

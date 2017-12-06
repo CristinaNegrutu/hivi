@@ -14,7 +14,7 @@ export class SideMenuComponent {
 	constructor(private elementRef:ElementRef) {}
 
   private logo = require("./assets/logo_with_text.png");
-	@Output() notify = new EventEmitter<string>();
+	@Output() notifyThatSideMenuChanged = new EventEmitter<string>();
 
 	showSideMenu(): void {
 		jQuery(this.elementRef.nativeElement).find('.a-collapse').sideNav();
@@ -23,22 +23,18 @@ export class SideMenuComponent {
 	}
 
 	displayListView(): void {
-		this.notify.emit("list");
+		this.notifyThatSideMenuChanged.emit("list");
 		console.log("Pressed the list button.");
 	}
 
 	displayPieChart(): void {
-		this.notify.emit("pie");
+		this.notifyThatSideMenuChanged.emit("pie");
 		console.log("Pressed the pie button.");
 	}
 
 	displayBarChart(): void {
-		this.notify.emit("bar");
+		this.notifyThatSideMenuChanged.emit("bar");
 		console.log("Pressed the bar button.");
-	}
-
-	export(): void {
-		console.log("Export button has been presses");
 	}
 
 }

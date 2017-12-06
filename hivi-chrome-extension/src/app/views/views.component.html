@@ -1,23 +1,25 @@
 <div>
 	<div class="row">
 		<div class="col s1">
-			<side-menu (notify)="notify($event)"></side-menu>
+			<side-menu (notifyThatSideMenuChanged)="updateAfterSideMenuSelectionChanged($event)"></side-menu>
 		</div>
-		<div class="col s10 offset-s1">
-			<data-filters></data-filters>
-			<div class="col s10">
-				<div *ngIf="whatToDisplay=='pie'">
-					<pie-chart></pie-chart>
-					<div class=".canvas-image">
-
-					</div>
-				</div>
-				<div *ngIf="whatToDisplay=='list'">
-					<list-view></list-view>
-				</div>
-				<div *ngIf="whatToDisplay=='bar'">
-					<bar-chart></bar-chart>
-				</div>
+		<div class="col s9 offset-s1 m6 offset-m1 l9 offset-l1">
+			<date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
+		</div>
+		<div class="col s1 m1 l1 settings-button">
+			<a routerLink="/settings" routerLinkActive="active" class="btn-floating btn-medium menu 26a69a"><i
+				class="material-icons">more_vert</i>
+			</a>
+		</div>
+		<div class="col s10 offset-s1 m6 offset-m1 l10 offset-l1">
+			<div *ngIf="whatToDisplay=='pie'">
+				<pie-chart></pie-chart>
+			</div>
+			<div *ngIf="whatToDisplay=='list'">
+				<list-view></list-view>
+			</div>
+			<div *ngIf="whatToDisplay=='bar'">
+				<bar-chart></bar-chart>
 			</div>
 		</div>
 	</div>
