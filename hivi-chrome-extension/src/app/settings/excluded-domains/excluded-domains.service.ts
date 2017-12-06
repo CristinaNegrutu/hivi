@@ -3,18 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
-export class Domain {
-	name: string;
-}
-
 @Injectable()
 export class ExcludedDomainsService {
 
-	public excludedDomains: Domain[] = [
-		// { name: 'yahoo' },
-	];
+	public excludedDomains: string[] = [];
 
-	getExcludedDomains(): Observable<Domain[]> {
+	getExcludedDomains(): Observable<string[]> {
 		return of(this.excludedDomains);
 	}
 
@@ -23,7 +17,7 @@ export class ExcludedDomainsService {
 		domainName = domainName.toLowerCase();
 		if (alreadyAdded == false){
 			if (domainName != "" && domainName !== null) {
-				this.excludedDomains.push({name: domainName});
+				this.excludedDomains.push(domainName);
 			}
 		}
 	}
@@ -35,7 +29,7 @@ export class ExcludedDomainsService {
 	domainNameInExcludedDomains(domainName: string): boolean {
 		var length = this.excludedDomains.length;
 		for (var i = 0; i < length; i++) {
-			if (this.excludedDomains[i].name === domainName) {
+			if (this.excludedDomains[i] === domainName) {
 				return true;
 			}
 		}

@@ -6,10 +6,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-	whatToDisplay: string = "pie";
-
-	notify(message):void {
-		this.whatToDisplay = message;
-	}
-
 }

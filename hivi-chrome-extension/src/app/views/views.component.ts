@@ -1,18 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ExcludedDomainsService } from '../settings/excluded-domains/excluded-domains.service';
 
 @Component({
 	selector: 'views',
 	templateUrl: './views.component.html',
 	styleUrls: ['./views.component.css']
 })
-export class ViewsComponent {
+export class ViewsComponent implements OnInit {
 
-	whatToDisplay: string = "pie";
-	selectedFilter: string = "TODAY";
+	public whatViewToDisplay: string = "pie";
+	public selectedFilter: string = "TODAY";
+	public excludedDomains: string[];
+
+	constructor(private domainsService: ExcludedDomainsService) { }
+
+	ngOnInit() {
+		this.getExcludedDomains();
+		console.log("ViewsComponent: excludedDomains = " + this.excludedDomains);
+	}
+
+	getExcludedDomains(): void {
+		this.domainsService.getExcludedDomains()
+		.subscribe(results => this.excludedDomains = results);
+	}
 
 	updateAfterSideMenuSelectionChanged(sideMenuSelectionValue): void {
-		this.whatToDisplay = sideMenuSelectionValue;
-		console.log("ViewsComponent: what to display = "+ this.whatToDisplay);
+		this.whatViewToDisplay = sideMenuSelectionValue;
+		console.log("ViewsComponent: what to display = "+ this.whatViewToDisplay);
 	}
 
 	updateAfterDateFilterValueChanged(dateFilterValue): void {

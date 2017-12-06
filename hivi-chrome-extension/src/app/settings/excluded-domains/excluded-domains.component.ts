@@ -1,34 +1,35 @@
-import { Component, OnInit, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
-import { Domain, ExcludedDomainsService } from './excluded-domains.service';
+import { Component, OnInit } from '@angular/core';
+import { ExcludedDomainsService } from './excluded-domains.service';
 
 @Component({
 	selector: 'excluded-domains',
 	templateUrl: './excluded-domains.component.html',
-	changeDetection: ChangeDetectionStrategy.Default
 })
 export class ExcludedDomainsComponent implements OnInit {
 
-	constructor(private domainsService: ExcludedDomainsService,
-		private changeDetectorRef: ChangeDetectorRef ) { }
+	public excludedDomains: string[];
 
-		public excludedDomains: Domain[];
+	constructor(private domainsService: ExcludedDomainsService) { }
 
-		ngOnInit() {
-			this.getExcludedDomains();
-		}
-
-		getExcludedDomains(): void {
-			this.domainsService.getExcludedDomains()
-			.subscribe(results => this.excludedDomains = results);
-		}
-
-		addDomainToList(domainName): void {
-			this.domainsService.addDomainToList(domainName);
-		}
-
-		deleteDomainFromList(domainName: string, index: number) {
-			this.domainsService.deleteDomainFromList(domainName, index);
-			this.changeDetectorRef.markForCheck();
-		}
-
+	ngOnInit() {
+		this.getExcludedDomains();
 	}
+
+	getExcludedDomains(): void {
+		this.domainsService.getExcludedDomains()
+		.subscribe(results => this.excludedDomains = results);
+	}
+
+	addDomainToList(domainName): void {
+		this.domainsService.addDomainToList(domainName);
+		console.log("ExcludedDomainsComponent: number of excluded domains = "
+		+ this.excludedDomains.length);
+	}
+
+	deleteDomainFromList(domainName: string, index: number) {
+		this.domainsService.deleteDomainFromList(domainName, index);
+		console.log("ExcludedDomainsComponent: number of excluded domains = "
+		+ this.excludedDomains.length);
+	}
+
+}

@@ -3,7 +3,6 @@ import {HostListener, Component, AfterViewInit} from '@angular/core';
 declare var jQuery: any;
 declare var chrome;
 
-
 @Component({
   selector: 'list-view',
   templateUrl: './list-view.component.html'
@@ -13,7 +12,6 @@ export class ListViewComponent implements AfterViewInit {
   onDocumentClick(event: MouseEvent) {
     this.createTree()
   }
-
 
   ngAfterViewInit() {
     this.dumpBookmarks()

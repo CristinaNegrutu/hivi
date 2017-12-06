@@ -22,9 +22,9 @@
 										<div *ngFor="let domain of excludedDomains; let i = index">
 											<tr>
 												<td>
-													<a (click)="deleteDomainFromList(domain.name, index)" class="btn-floating  waves-effect waves-light"><i class="material-icons">remove</i></a>
+													<a (click)="deleteDomainFromList(domain, i)" class="btn-floating  waves-effect waves-light"><i class="material-icons">remove</i></a>
 												</td>
-												<td><strong>{{domain.name}}</strong></td>
+												<td><strong>{{domain}}</strong></td>
 											</tr>
 										</div>
 									</tbody>
