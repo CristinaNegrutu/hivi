@@ -25,6 +25,7 @@ export class BarChartComponent implements OnInit {
 	  };
 		this.barChartType = 'bar';
 		this.barChartLegend = true;
+    this.hiviService.dumpBookmarks()
 	}
 
   public chartClicked(e:any):void {
@@ -34,5 +35,8 @@ export class BarChartComponent implements OnInit {
   public chartHovered(e:any):void {
     console.log(e);
   }
+
+
+
 
 }
