@@ -15,7 +15,9 @@ export class PieChartComponent implements OnInit {
 	public pieChartType: string;
 
 	ngOnInit(): void {
-		this.pieChartLabels = this.hiviService.getPieChartsLabels();
+    this.hiviService.dumpBookmarks();
+
+    this.pieChartLabels = this.hiviService.getPieChartsLabels();
 		this.pieChartData = this.hiviService.getPieChartData();
 		this.pieChartType = 'pie';
 	}

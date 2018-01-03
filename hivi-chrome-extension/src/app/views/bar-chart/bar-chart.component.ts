@@ -17,7 +17,9 @@ export class BarChartComponent implements OnInit {
   public barChartData: any[];
 
 	ngOnInit(): void {
-		this.barChartLabels = this.hiviService.getBarChartLabels();
+    this.hiviService.dumpBookmarks();
+
+    this.barChartLabels = this.hiviService.getBarChartLabels();
 		this.barChartData = this.hiviService.getBarChartData();
 		this.barChartOptions = {
 	    scaleShowVerticalLines: false,
@@ -25,7 +27,6 @@ export class BarChartComponent implements OnInit {
 	  };
 		this.barChartType = 'bar';
 		this.barChartLegend = true;
-    this.hiviService.dumpBookmarks()
 	}
 
   public chartClicked(e:any):void {
