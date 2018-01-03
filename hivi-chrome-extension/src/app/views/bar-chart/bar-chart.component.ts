@@ -23,7 +23,28 @@ export class BarChartComponent implements OnInit {
 		this.barChartData = this.hiviService.getBarChartData();
 		this.barChartOptions = {
 	    scaleShowVerticalLines: false,
-	    responsive: true
+	    responsive: true,
+      barPercentage:1,
+      scales: {
+        xAxes: [{
+          stacked: false,
+          beginAtZero: true,
+          scaleLabel: {
+            labelString: 'Bookmarkss'
+          },
+          ticks: {
+            stepSize: 1,
+            min: 0,
+            autoSkip: false
+          }
+        }],
+        yAxes: [{
+          ticks: {
+            beginAtZero:true
+          }
+        }]
+      }
+
 	  };
 		this.barChartType = 'bar';
 		this.barChartLegend = true;

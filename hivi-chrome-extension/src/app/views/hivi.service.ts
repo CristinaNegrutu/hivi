@@ -10,10 +10,12 @@ export class HiviService {
   dumpBookmarks(): void {
 
 
+
+    //
     let dummyArray, treeRoot;
     chrome.bookmarks.getTree((results) => {
-      treeRoot = results[0]
-      console.log(results)
+      // let results = JSON.parse(dummyData)
+      let treeRoot = results[0];
       let i;
       for (i = 0; i < treeRoot.children.length; i++) {
         let subTree = treeRoot.children[i];
@@ -69,7 +71,40 @@ export class HiviService {
 
   }
 
-  filterByInterval(since, to) {
+  filterByInterval(interval) {
+
+    switch (interval) {
+      case "LAST_MONTH":
+        let oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+
+        let until = new Date();
+        this.filterByDate(oneMonthAgo, until);
+        break;
+      case "LAST_WEEK":
+        let oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+        this.filterByDate(oneWeekAgo, new Date());
+        break;
+      case "TODAY":
+        let today = new Date();
+        today.setDate(today.getDate() - 1);
+
+        this.filterByDate(today, new Date());
+        break;
+      default:
+        this.filterByDate();
+
+    }
+
+  }
+
+  filterByDate(since = null, to = null) {
+    if (since == null && to == null) {
+      return;
+    }
+    this.bookmarksList = this.bookmarksList.filter(item => item.value.dateAdded > since && item.value.dateAdded < to);
 
   }
 
@@ -122,7 +157,7 @@ export class HiviService {
   // Bar-Chart related methods
   getBarChartLabels(): string[] {
 
-    let mostBookmarked = this.getTopMostBookmarked(5);
+    let mostBookmarked = this.getTopMostBookmarked(10);
     let labels = [];
     let i;
     for (i = 0; i < mostBookmarked.length; i++) {
@@ -134,7 +169,7 @@ export class HiviService {
 
   getBarChartData(): any[] {
 
-    let mostBookmarked = this.getTopMostBookmarked(5);
+    let mostBookmarked = this.getTopMostBookmarked(10);
     let values = [];
     let i;
     for (i = 0; i < mostBookmarked.length; i++) {

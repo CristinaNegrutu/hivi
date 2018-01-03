@@ -2,7 +2,7 @@
 	<div class="row col s8 m6 l10 horizontal-filter">
 		<div class="horizontal-filter-group">
 			<div class="col s12 m6 l3">
-				<input name="filter" checked type="radio" id="today" (click)="updateDataFilterValue('TODAY')">
+				<input name="filter" type="radio" id="today" (click)="updateDataFilterValue('TODAY')">
 				<label for="today">Today</label>
 			</div>
 			<div class="col s12 m6 l3">
@@ -14,7 +14,7 @@
 				<label for="last_month">Last month</label>
 			</div>
 			<div class="col s12 m6 l3">
-				<input name="filter" type="radio" id="all_time" (click)="updateDataFilterValue('ALL_TIME')">
+				<input name="filter" checked type="radio" id="all_time" (click)="updateDataFilterValue('ALL_TIME')">
 				<label for="all_time">All time</label>
 			</div>
 		</div>
