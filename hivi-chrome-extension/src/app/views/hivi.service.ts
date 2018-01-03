@@ -9,20 +9,24 @@ export class HiviService {
 
   dumpBookmarks(): void {
 
-    // let dummyArray = JSON.parse(dummyData);
+
+    let dummyArray, treeRoot;
+    chrome.bookmarks.getTree((results) => {
+      treeRoot = results[0]
+      console.log(results)
+      let i;
+      for (i = 0; i < treeRoot.children.length; i++) {
+        let subTree = treeRoot.children[i];
+
+        this.parseSubtree(subTree);
+
+      }
+
+    });
+
+    // let treeRoot = dummyArray[0];
 
 
-    let dummyArray = chrome.bookmarks.getTree();
-
-    let treeRoot = dummyArray[0];
-
-    let i;
-    for (i = 0; i < treeRoot.children.length; i++) {
-      let subTree = treeRoot.children[i];
-
-      this.parseSubtree(subTree);
-
-    }
     // console.log(this.bookmarksList);
 
   }

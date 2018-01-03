@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="6ce25120-9071-4850-b5a9-3a87a1adab8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts" afterPath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/inline.bundle.js.map" afterPath="$PROJECT_DIR$/Chrome Extension/inline.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/main.bundle.js" afterPath="$PROJECT_DIR$/Chrome Extension/main.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/main.bundle.js.map" afterPath="$PROJECT_DIR$/Chrome Extension/main.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/polyfills.bundle.js.map" afterPath="$PROJECT_DIR$/Chrome Extension/polyfills.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/styles.bundle.js.map" afterPath="$PROJECT_DIR$/Chrome Extension/styles.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/vendor.bundle.js" afterPath="$PROJECT_DIR$/Chrome Extension/vendor.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chrome Extension/vendor.bundle.js.map" afterPath="$PROJECT_DIR$/Chrome Extension/vendor.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/inline.bundle.js.map" afterPath="$PROJECT_DIR$/build-dump/inline.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/main.bundle.js" afterPath="$PROJECT_DIR$/build-dump/main.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/main.bundle.js.map" afterPath="$PROJECT_DIR$/build-dump/main.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/polyfills.bundle.js.map" afterPath="$PROJECT_DIR$/build-dump/polyfills.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/styles.bundle.js.map" afterPath="$PROJECT_DIR$/build-dump/styles.bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/vendor.bundle.js" afterPath="$PROJECT_DIR$/build-dump/vendor.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-dump/vendor.bundle.js.map" afterPath="$PROJECT_DIR$/build-dump/vendor.bundle.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/hivi.service.ts" afterPath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/hivi.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/pie-chart/pie-chart.component.ts" afterPath="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/pie-chart/pie-chart.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,24 +30,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bar-chart.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts">
+    <leaf>
+      <file leaf-file-name=".angular-cli.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/.angular-cli.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pie-chart.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/pie-chart/pie-chart.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2" column="46" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="486">
+              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="hivi.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/hivi.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="558">
+              <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -65,9 +65,9 @@
       <find>getTopMostBookmarked</find>
       <find>console.log</find>
       <find>getBarChartData</find>
-      <find>chrome</find>
       <find>expandTree</find>
       <find>getPieChartsLabels</find>
+      <find>chrome</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/hivi-chrome-extension</dir>
@@ -85,6 +85,7 @@
         <option value="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/list-view/list-view.component.ts" />
         <option value="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/pie-chart/pie-chart.component.ts" />
         <option value="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts" />
+        <option value="$PROJECT_DIR$/hivi-chrome-extension/.angular-cli.json" />
         <option value="$PROJECT_DIR$/hivi-chrome-extension/src/app/views/hivi.service.ts" />
       </list>
     </option>
@@ -120,6 +121,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,53 +140,10 @@
               <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="hivi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivi" type="462c0819:PsiDirectoryNode" />
-              <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivi" type="462c0819:PsiDirectoryNode" />
-              <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivi" type="462c0819:PsiDirectoryNode" />
-              <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="bar-chart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivi" type="462c0819:PsiDirectoryNode" />
-              <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="list-view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hivi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hivi" type="462c0819:PsiDirectoryNode" />
-              <item name="hivi-chrome-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pie-chart" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -238,15 +197,17 @@
       <workItem from="1512820745289" duration="13960000" />
       <workItem from="1512978134844" duration="282000" />
       <workItem from="1514897731148" duration="11343000" />
-      <workItem from="1514970581039" duration="4711000" />
+      <workItem from="1514970581039" duration="4746000" />
+      <workItem from="1514978119148" duration="16000" />
+      <workItem from="1514990037889" duration="2955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54210000" />
+    <option name="totallyTimeSpent" value="57216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1985" y="-4" width="1855" height="1204" extended-state="6" />
+    <frame x="2108" y="358" width="1855" height="1204" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -254,12 +215,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283721" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283721" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283721" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -313,9 +274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -323,7 +281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
           <caret line="61" column="51" lean-forward="true" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -331,7 +288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -346,7 +302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="132" column="75" lean-forward="false" selection-start-line="132" selection-start-column="75" selection-end-line="132" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -368,7 +323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
           <caret line="132" column="75" lean-forward="true" selection-start-line="132" selection-start-column="75" selection-end-line="132" selection-end-column="75" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -397,7 +351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -419,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -441,7 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="61" lean-forward="true" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -463,7 +414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -478,7 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="45" column="94" lean-forward="true" selection-start-line="45" selection-start-column="94" selection-end-line="45" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -493,7 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -517,9 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -527,7 +472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -535,17 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -553,14 +486,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="2" column="46" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/bar-chart/bar-chart.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hivi-chrome-extension/src/app/views/hivi.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="558">
+          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding />
         </state>
       </provider>
