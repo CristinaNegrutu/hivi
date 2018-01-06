@@ -7,25 +7,28 @@
 					<div class="col s12">
 						<div class="row">
 							<div class="col s4 offset-s2">
-								<div class="card">
+								<div style="cursor: pointer;" (click)="changeTheme('LIGHT')"
+								class="card">
 									<div class="card-image " style="background-color: #e0e0e0">
-										<img [src]="'assets/dark.png'" class="responsive-img" style="width:10em; margin:0 auto">
+										<img [src]="'assets/light.png'" class="responsive-img" style="width:10em; margin:0 auto">
 									</div>
 									<div class="card-content center">
 										<div class="card-action ">
-											<a class="grey-text" href="#">Light theme</a>
+											<a class="grey-text" href="settings">Light theme</a>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col s4">
+							<div style="cursor: pointer;" (click)="changeTheme('DARK')"
+							class="col s4">
+								<div id="result"></div>
 								<div class="card">
 									<div class="card-image" style="background-color: #424242">
 										<img [src]="'assets/dark.png'" class="responsive-img" style="width:10em; margin:0 auto">
 									</div>
 									<div class="card-content center">
 										<div class="card-action ">
-											<a class="grey-text" href="#">Dark theme</a>
+											<a class="grey-text" href="settings">Dark theme</a>
 										</div>
 									</div>
 								</div>
