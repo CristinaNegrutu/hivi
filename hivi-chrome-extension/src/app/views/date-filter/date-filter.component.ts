@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, OnInit } from '@angular/core';
 import { HiviService } from '../hivi.service';
 
 @Component({
@@ -7,8 +7,7 @@ import { HiviService } from '../hivi.service';
 	styleUrls: ['./date-filter.component.css']
 })
 
-
-export class DateFilterComponent {
+export class DateFilterComponent implements OnInit {
   constructor(public hiviService: HiviService) {}
 
 	/*
@@ -23,6 +22,10 @@ export class DateFilterComponent {
 		this.notifyThatSelectedFilterChanged.emit(this.selectedFilter);
 		console.log("Filter value changed to " + this.selectedFilter);
     this.hiviService.filterByInterval(value)
+	}
+
+	ngOnInit() {
+		document.getElementById("date-filter-box").style.backgroundColor = "white";
 	}
 
 }

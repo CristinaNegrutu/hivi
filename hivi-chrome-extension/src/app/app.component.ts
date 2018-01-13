@@ -11,8 +11,6 @@ export class AppComponent {
 
 	ngOnInit() {
 		var theme = localStorage.getItem("selectedTheme");
-		console.log("New theme is " + theme + ".");
-
 		if (theme == "DARK") {
 			this.document.body.style.backgroundColor="#2f4f4f";
 		} else {
