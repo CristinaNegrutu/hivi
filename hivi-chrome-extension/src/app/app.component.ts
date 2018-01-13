@@ -2,7 +2,6 @@ import { Component, Inject} from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
-	styleUrls:[]
 	selector: 'app-root',
 	templateUrl: './app.component.html',
 })
