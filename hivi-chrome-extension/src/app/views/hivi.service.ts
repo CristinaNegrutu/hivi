@@ -9,27 +9,17 @@ export class HiviService {
 
   dumpBookmarks(): void {
 
-
-
-    //
-    let dummyArray, treeRoot;
     chrome.bookmarks.getTree((results) => {
-      // let results = JSON.parse(dummyData)
+      // let results = JSON.parse(dummyData);
       let treeRoot = results[0];
       let i;
       for (i = 0; i < treeRoot.children.length; i++) {
         let subTree = treeRoot.children[i];
-
         this.parseSubtree(subTree);
 
       }
 
     });
-
-    // let treeRoot = dummyArray[0];
-
-
-    // console.log(this.bookmarksList);
 
   }
 
@@ -72,7 +62,6 @@ export class HiviService {
   }
 
   filterByInterval(interval) {
-
     switch (interval) {
       case "LAST_MONTH":
         let oneMonthAgo = new Date();
@@ -104,7 +93,16 @@ export class HiviService {
     if (since == null && to == null) {
       return;
     }
-    this.bookmarksList = this.bookmarksList.filter(item => item.value.dateAdded > since && item.value.dateAdded < to);
+
+    let aux = [];
+    for (let i = 0; i < this.bookmarksList.length; i++) {
+
+      if (this.bookmarksList[i].value.dateAdded > since && this.bookmarksList[i].value.dateAdded < to) {
+        aux.push(this.bookmarksList[i]);
+      }
+
+    }
+    this.bookmarksList = aux
 
   }
 

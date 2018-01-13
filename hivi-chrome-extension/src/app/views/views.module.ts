@@ -42,7 +42,9 @@ const appRoutes: Routes = [
   ],
   providers: [
     HiviService,
-		ExcludedDomainsService
+		ExcludedDomainsService,
+    BarChartComponent,
+    PieChartComponent
   ]
 })
 export class ViewsModule {
