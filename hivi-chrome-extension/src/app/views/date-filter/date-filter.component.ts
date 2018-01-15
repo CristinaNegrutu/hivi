@@ -1,8 +1,6 @@
 import {Component, ElementRef, EventEmitter, Output, OnInit} from '@angular/core';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject'
 import {HiviService} from '../hivi.service';
-import {BarChartComponent} from '../bar-chart/bar-chart.component';
-import {PieChartComponent} from '../pie-chart/pie-chart.component';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 @Component({
   selector: 'date-filter',
@@ -11,9 +9,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 })
 
 export class DateFilterComponent implements OnInit {
-  constructor(public hiviService: HiviService,
-              public bar: BarChartComponent,
-              public pie: PieChartComponent) {
+  constructor(public hiviService: HiviService) {
   }
 
   /*
@@ -21,15 +17,22 @@ export class DateFilterComponent implements OnInit {
     TODAY, LAST_WEEK, LAST_MONTH, ALL_TIME
     */
   public selectedFilter: string = 'ALL_TIME';
+
+  public shouldRefreshChart = new BehaviorSubject<boolean>(false); // true is your initial value
+  shouldRefreshChart$ = this.shouldRefreshChart.asObservable();
+
+
   @Output() notifyThatSelectedFilterChanged = new EventEmitter<string>();
 
   updateDataFilterValue(value: string): void {
-    this.selectedFilter = value;
     this.notifyThatSelectedFilterChanged.emit(this.selectedFilter);
-    // console.log("Filter value changed to " + this.selectedFilter);
+
+    this.selectedFilter = value;
+
     this.hiviService.filterByInterval(value)
-    // console.log(this.hiviService.bookmarksList.length)
-    this.bar.refresh();
+    this.shouldRefreshChart.next(true);
+    console.log("this.shouldRefreshChart.getValue()");
+    console.log(this.shouldRefreshChart.getValue())
   }
 
   ngOnInit() {

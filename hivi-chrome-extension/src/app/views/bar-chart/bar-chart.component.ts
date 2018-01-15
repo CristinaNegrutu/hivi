@@ -1,7 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { SimpleChanges } from '@angular/core';
-
+import {SimpleChanges} from '@angular/core';
+import {Subscription} from 'rxjs/Subscription';
 import {HiviService} from '../hivi.service';
+import {DateFilterComponent} from '../date-filter/date-filter.component';
 import {BaseChartDirective} from 'ng2-charts/ng2-charts';
 
 @Component({
@@ -9,9 +10,11 @@ import {BaseChartDirective} from 'ng2-charts/ng2-charts';
   templateUrl: './bar-chart.component.html'
 })
 export class BarChartComponent implements OnInit {
-  @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
-  constructor(public hiviService: HiviService) {
+  @ViewChild('myChart') chart: BaseChartDirective;
+
+  constructor(public hiviService: HiviService,
+              public filters: DateFilterComponent) {
   }
 
   public barChartOptions: any;
@@ -19,6 +22,7 @@ export class BarChartComponent implements OnInit {
   public barChartType: string;
   public barChartLegend: boolean;
   public barChartData: any[];
+  public subscription: Subscription;
 
   ngOnInit(): void {
     this.hiviService.dumpBookmarks();
@@ -52,50 +56,31 @@ export class BarChartComponent implements OnInit {
     };
     this.barChartType = 'bar';
     this.barChartLegend = true;
+
+    this.subscription = this.filters.shouldRefreshChart
+      .subscribe(data => {
+        console.log("refresh");
+
+        this.refresh();
+      })
   }
 
-  public refresh() {
-    console.log("refresh")
+  public refresh(): void {
+    console.log("refresh");
 
-    if (this.chart !== undefined) {
-      this.chart.chart.destroy();
-      this.chart.chart = 0;
-
-      this.chart.datasets = this.hiviService.getBarChartData();
-      this.chart.labels = this.hiviService.getBarChartLabels();
-      this.chart.chart.refresh();
-    }
+    this.barChartData = this.hiviService.getBarChartData();
+    this.barChartLabels = this.hiviService.getBarChartLabels();
+    // this.chart.chart.refresh()
   }
 
   public chartClicked(e: any): void {
     console.log(e);
+    var charta = this.chart; //Internal chart.js chart object
+    console.log(charta);
   }
 
   public chartHovered(e: any): void {
     console.log(e);
   }
 
-  public ngOnChanges(changes: SimpleChanges): void {
-    if (this.chart.chart.initFlag) {
-      // Check if the changes are in the data or datasets
-      if (changes.hasOwnProperty('data') || changes.hasOwnProperty('datasets')) {
-        // Oliver, May 19th 17
-        if (changes.hasOwnProperty('legend') ||
-          changes.hasOwnProperty('colors') ||
-          changes.hasOwnProperty('labels') ||
-          changes.hasOwnProperty('options')) {
-          this.refresh();
-        } else /* Oliver, May 19th 17 */ if (changes['data']) {
-          this.chart.chart.updateChartData(changes['data'].currentValue);
-        } else {
-          this.chart.chart.updateChartData(changes['datasets'].currentValue);
-        }
-
-        this.chart.chart.update();
-      } else {
-        // otherwise rebuild the chart
-        this.refresh();
-      }
-    }
-  }
 }

@@ -44,7 +44,8 @@ const appRoutes: Routes = [
     HiviService,
 		ExcludedDomainsService,
     BarChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    DateFilterComponent
   ]
 })
 export class ViewsModule {
