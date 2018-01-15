@@ -1,5 +1,4 @@
-import {Component, ElementRef, EventEmitter, Output, OnInit} from '@angular/core';
-import {BehaviorSubject} from 'rxjs/BehaviorSubject'
+import {Component, EventEmitter, Output, OnInit} from '@angular/core';
 import {HiviService} from '../hivi.service';
 
 @Component({
@@ -18,8 +17,7 @@ export class DateFilterComponent implements OnInit {
     */
   public selectedFilter: string = 'ALL_TIME';
 
-  public shouldRefreshChart = new BehaviorSubject<boolean>(false); // true is your initial value
-  shouldRefreshChart$ = this.shouldRefreshChart.asObservable();
+  public shouldRefreshChart = true;
 
 
   @Output() notifyThatSelectedFilterChanged = new EventEmitter<string>();
@@ -29,10 +27,9 @@ export class DateFilterComponent implements OnInit {
 
     this.selectedFilter = value;
 
-    this.hiviService.filterByInterval(value)
-    this.shouldRefreshChart.next(true);
-    console.log("this.shouldRefreshChart.getValue()");
-    console.log(this.shouldRefreshChart.getValue())
+    this.hiviService.filterByInterval(value);
+    this.shouldRefreshChart = true;
+
   }
 
   ngOnInit() {
