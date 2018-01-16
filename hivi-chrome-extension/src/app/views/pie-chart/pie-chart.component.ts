@@ -17,6 +17,7 @@ export class PieChartComponent implements OnInit {
   public pieChartLabels: string[];
   public pieChartData: number[];
   public pieChartType: string;
+  public pieChartOptions: any;
 
   ngOnInit(): void {
     this.hiviService.dumpBookmarks();
@@ -24,6 +25,9 @@ export class PieChartComponent implements OnInit {
     this.pieChartLabels = this.hiviService.getPieChartsLabels();
     this.pieChartData = this.hiviService.getPieChartData();
     this.pieChartType = 'pie';
+    this.pieChartOptions = {
+      responsive: true
+    }
   }
 
   public chartClicked(e: any): void {
@@ -36,7 +40,7 @@ export class PieChartComponent implements OnInit {
   }
 
   public redrawChart(): void {
-    if (localStorage.getItem("shouldRefreshChart")==="1") {
+    if (localStorage.getItem("shouldRefreshChart") === "1") {
       // console.log("BarChartComponent: redrawChart() method call...");
 
       this.chart.chart.destroy();

@@ -46,7 +46,14 @@ export class HiviService {
 
   addToBookmarksList(url, date) {
     let splicedUrl = this.spliceToDomain(url);
-
+    if (this.isUrlExcluded(splicedUrl)) {
+      console.log("found")
+      console.log(splicedUrl)
+      return;
+    }
+    if(splicedUrl == "http://profs.info.uaic.ro"){
+      console.log("profs")
+    }
     if (typeof this.bookmarksList.find(item => item["key"] == splicedUrl) === "undefined") {
       let entry = {};
       entry["key"] = splicedUrl;
@@ -60,6 +67,17 @@ export class HiviService {
       this.bookmarksList.find(item => item["key"] == splicedUrl).value.occurrences += 1;
     }
 
+  }
+
+  isUrlExcluded(url) {
+    if (localStorage.getItem("excluded_domains") == null) {
+      return false;
+    }
+    let excludedDomains = JSON.parse(localStorage.getItem("excluded_domains"));
+    if (excludedDomains.indexOf(url) === -1) {
+      return false;
+    }
+    return true;
   }
 
   filterByInterval(interval) {
@@ -124,7 +142,8 @@ export class HiviService {
 
   getTopMostBookmarked(n = 10) {
     let m = -1 * n;
-    let orderedItems = this.bookmarksList.sort(this.compareItems);
+    let orderedItems = this.bookmarksList.filter(url => this.isUrlExcluded(url) == false).sort(this.compareItems);
+    console.log(orderedItems)
     return orderedItems.slice(m - 1, -1).reverse();
   }
 

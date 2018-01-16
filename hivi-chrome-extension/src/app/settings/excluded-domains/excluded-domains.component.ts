@@ -18,7 +18,7 @@ export class ExcludedDomainsComponent implements OnInit {
 
   getExcludedDomains() {
 
-    if (typeof localStorage.getItem("excluded_domains") == "undefined") {
+    if (localStorage.getItem("excluded_domains") == null) {
       return []
     } else {
       return JSON.parse(localStorage.getItem("excluded_domains"));
@@ -29,7 +29,7 @@ export class ExcludedDomainsComponent implements OnInit {
   addDomainToList(domainName): void {
 
     let domains;
-    if (typeof localStorage.getItem("excluded_domains") == "undefined") {
+    if (localStorage.getItem("excluded_domains") == null) {
       console.log("shit is getting cleaned");
       domains = []
     } else {

@@ -1,8 +1,9 @@
 <div style="display: block">
-	<canvas baseChart #myPieChart="base-chart"
-	[data]="pieChartData"
-	[labels]="pieChartLabels"
-	[chartType]="pieChartType"
+  <canvas baseChart #myPieChart="base-chart"
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [options]="pieChartOptions"
+          [chartType]="pieChartType"
   ></canvas>
 </div>
 {{redrawChart()}}
