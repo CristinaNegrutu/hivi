@@ -2,8 +2,8 @@
 	margin-bottom: 1em;
 }
 
-.settings-button {
-  padding-bottom: 1em;
-	/*padding-top: 1em;*/
-	margin-top: 1em;
+#settings-button {
+	position: absolute;
+	right: 1em;
+	top: 1em;
 }
