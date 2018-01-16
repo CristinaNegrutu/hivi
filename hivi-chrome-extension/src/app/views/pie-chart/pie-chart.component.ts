@@ -37,13 +37,16 @@ export class PieChartComponent implements OnInit {
 
   public redrawChart(): void {
     if (localStorage.getItem("shouldRefreshChart")==="1") {
-      console.log("BarChartComponent: redrawChart() method call...");
-      this.pieChartData = this.hiviService.getPieChartData();
-      this.pieChartLabels = this.hiviService.getPieChartsLabels();
-      this.chart.chart = this.chart.getChartBuilder(this.chart.ctx);
+      // console.log("BarChartComponent: redrawChart() method call...");
 
-      this.chart.chart.update();
+      this.chart.chart.destroy();
+      this.chart.chart = 0;
+
+      this.chart.datasets = this.hiviService.getBarChartData();
+      this.chart.labels = this.hiviService.getBarChartLabels();
+      this.chart.ngOnInit();
       localStorage.setItem("shouldRefreshChart", "0");
+
     }
   }
 

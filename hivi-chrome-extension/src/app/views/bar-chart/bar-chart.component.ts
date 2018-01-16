@@ -20,7 +20,7 @@ export class BarChartComponent implements OnInit {
   public barChartType: string;
   public barChartLegend: boolean;
   public barChartData: any[];
-	public shouldRefreshChartDefault = localStorage.getItem("shouldRefreshChart")==="1";
+  public shouldRefreshChartDefault = localStorage.getItem("shouldRefreshChart") === "1";
 
   ngOnInit(): void {
     this.hiviService.dumpBookmarks();
@@ -54,16 +54,18 @@ export class BarChartComponent implements OnInit {
     this.barChartLegend = true;
   }
 
-	public redrawChart(): void {
-		if (localStorage.getItem("shouldRefreshChart")==="1") {
-			console.log("BarChartComponent: redrawChart() method call...");
-			this.barChartData = this.hiviService.getBarChartData();
-			this.barChartLabels = this.hiviService.getBarChartLabels();
-      this.chart.chart = this.chart.getChartBuilder(this.chart.ctx);
+  public redrawChart(): void {
+    if (localStorage.getItem("shouldRefreshChart") === "1") {
+      // console.log("BarChartComponent: redrawChart() method call...");
 
-      this.chart.chart.update();
-			localStorage.setItem("shouldRefreshChart", "0");
-		}
+      this.chart.chart.destroy();
+      this.chart.chart = 0;
+
+      this.chart.datasets = this.hiviService.getBarChartData();
+      this.chart.labels = this.hiviService.getBarChartLabels();
+      this.chart.ngOnInit();
+      localStorage.setItem("shouldRefreshChart", "0");
+    }
   }
 
   public chartClicked(e: any): void {

@@ -56,7 +56,7 @@ export class ListViewComponent implements AfterViewInit {
       let classSelector = this.generateRandomId("asd");
 
       jQuery('#' + domItem + ' ul').append(
-        '  <li id="'+classSelector+'" >\n' +
+        '  <li id="' + classSelector + '" >\n' +
         '    <div class="collapsible-header grey lighten-2">\n' +
         '      <i class="material-icons">folder</i>' + dummyArray.children[i].title + '\n' +
         '    </div>\n'
@@ -68,7 +68,6 @@ export class ListViewComponent implements AfterViewInit {
 
 
         if (typeof currentArray[j].children == 'undefined') {
-
           jQuery('#' + domItem + ' ul li').append(
             '    <div class="collapsible-body">' +
             '       <a target="_blank" href="' + currentArray[j].url + '">' + dummyArray.children[i].children[j].title +
@@ -76,24 +75,7 @@ export class ListViewComponent implements AfterViewInit {
             '    </div>\n'
           );
 
-        } else {
-          // jQuery('#' + domItem + ' ul li').append(
-          //   '    <div class="collapsible-body" id="' + classSelector + '">' +
-          //   '       <a target="_blank" href="' + currentArray[j].url + '">' + dummyArray.children[i].children[j].title +
-          //   '</a>' +
-          //   '</div>\n'
-          // );
-
-          let newArray = currentArray[j];
-
-          // console.log("am dat de subfolder cu titlul:");
-          // console.log(currentArray[j].title);
-          //
-          // console.log("si lungimea:");
-          // console.log(currentArray[j].children.length);
-          this.expandRecursively(newArray, domItem, classSelector)
         }
-
 
       }
 
@@ -105,56 +87,6 @@ export class ListViewComponent implements AfterViewInit {
   }
 
 
-  expandRecursively(dummyArray, item, classSelector): void {
-
-    let newSelector = this.generateRandomId(item);
-    console.log( "~~~~``")
-    console.log( jQuery('#'+classSelector).length)
-
-    jQuery('#'+classSelector).append(
-      // '     <div id="' + newSelector + '">' +
-      '          <div class="collapsible-header grey lighten-2">\n' +
-      '             <i class="material-icons">folder</i>' + dummyArray.title + '\n' +
-      '         </div>\n' +
-      '         <div class="collapsible-body">' +
-      '            <ul class="collapsible" data-collapsible="accordion">'
-    );
-
-    let j;
-
-    let currentChildren = dummyArray.children;
-    for (j = 0; j < currentChildren.length; j++) {
-
-      if (typeof currentChildren[j].children === 'undefined') {
-
-        jQuery('#' + classSelector + ' ul').append(
-          ' <li' +
-          ' <div class="collapsible-header">\n' +
-          ' <i class="material-icons">filter_drama</i>Nested First</div>' +
-          ' <div class="collapsible-body"><p>' + currentChildren[j].title + '</p></div></li>\n'
-        );
-      } else if (typeof currentChildren[j].children !== 'undefined'  ) {
-        // console.log(currentChildren[j].children)
-        let classSelector = this.generateRandomId("asd");
-
-        // this.expandRecursively(currentChildren[j], newSelector, classSelector)
-        //
-        // console.log("am dat de subfolder cu titlul:");
-        // console.log(currentChildren[j].title);
-        //
-        // console.log("si lungimea:");
-        // console.log(currentChildren[j].children.length);
-
-      }
-
-    }
-
-    jQuery('#'+classSelector).append(
-      // '</div>' +
-      ' </ul>'
-    );
-
-  }
 
   generateRandomId(domItem): string {
     let randomNumber = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
