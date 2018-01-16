@@ -23,7 +23,7 @@ export class BarChartComponent implements OnInit {
   public barChartLegend: boolean;
   public barChartData: any[];
   public subscription: Subscription;
-	public should = "1";
+	public shouldRefreshChartDefault = localStorage.getItem("shouldRefreshChart")==="1";
 
   ngOnInit(): void {
     this.hiviService.dumpBookmarks();
@@ -55,44 +55,20 @@ export class BarChartComponent implements OnInit {
     };
     this.barChartType = 'bar';
     this.barChartLegend = true;
-
-    // this.subscription = this.filters.shouldRefreshChart
-    //   .subscribe(data => {
-    //     console.log("refresh");
-		//
-    //     this.refresh();
-    //   })
   }
-
-  // public refresh(): void {
-	// 	if (this.filters.shouldRefreshChart) {
-	// 		console.log("Redrawing chart...");
-	// 		this.barChartData = this.hiviService.getBarChartData();
-	// 		this.barChartLabels = this.hiviService.getBarChartLabels();
-	// 		this.chart.chart.update();
-	// 		this.filters.shouldRefreshChart = false;
-	// 	} else {
-	// 		console.log("Nothing to refresh...");
-	// 	}
-  // }
 
 	public redrawChart(): void {
 		if (localStorage.getItem("shouldRefreshChart")==="1") {
-			console.log("Redrawing chart...");
+			console.log("BarChartComponent: redrawChart() method call...");
 			this.barChartData = this.hiviService.getBarChartData();
 			this.barChartLabels = this.hiviService.getBarChartLabels();
 			this.chart.chart.update();
 			localStorage.setItem("shouldRefreshChart", "0");
-			console.log("aaa");
-		} else {
-			console.log("Nothing to refresh...");
 		}
   }
 
   public chartClicked(e: any): void {
     console.log(e);
-    var charta = this.chart; //Internal chart.js chart object
-    console.log(charta);
   }
 
   public chartHovered(e: any): void {

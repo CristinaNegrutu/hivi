@@ -16,22 +16,18 @@ export class DateFilterComponent implements OnInit {
     TODAY, LAST_WEEK, LAST_MONTH, ALL_TIME
     */
   public selectedFilter: string = 'ALL_TIME';
-
   public shouldRefreshChart = true;
-
-
 
   @Output() notifyThatSelectedFilterChanged = new EventEmitter<string>();
 
   updateDataFilterValue(value: string): void {
     this.notifyThatSelectedFilterChanged.emit(this.selectedFilter);
-
     this.selectedFilter = value;
-
     this.hiviService.filterByInterval(value);
     this.shouldRefreshChart = true;
 		localStorage.setItem("shouldRefreshChart", "1");
-
+		console.log("DateFilterComponent, shouldRefreshChart = "
+		+ localStorage.getItem("shouldRefreshChart"));
   }
 
   ngOnInit() {
