@@ -3,17 +3,20 @@
 		<div class="col s1">
 			<side-menu (notifyThatSideMenuChanged)="updateAfterSideMenuSelectionChanged($event)"></side-menu>
 		</div>
-		<div class="col s9 offset-s1 m6 offset-m1 l9 offset-l1">
-			<date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
+		<div *ngIf="whatViewToDisplay=='pie' || whatViewToDisplay=='bar'">
+			<div class="col s9 offset-s1 m6 offset-m1 l9 offset-l1">
+				<date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
+			</div>
 		</div>
-		<div class="col s1 m1 l1 settings-button">
-			<a routerLink="/settings" routerLinkActive="active" class="btn-floating btn-medium menu 26a69a"><i
+		<div class=" settings-button" style="position: relative;">
+			<a id="settings-button" routerLink="/settings" routerLinkActive="active" class="btn-floating btn-medium menu 26a69a"><i
 				class="material-icons">more_vert</i>
 			</a>
+			<br><br><br><br	>
 		</div>
 		<div class="col s10 offset-s1 m6 offset-m1 l10 offset-l1">
 			<div *ngIf="whatViewToDisplay=='pie'">
-				<pie-chart></pie-chart>
+				<pie-chart><pie-chart>
 			</div>
 			<div *ngIf="whatViewToDisplay=='list'">
 				<list-view></list-view>
