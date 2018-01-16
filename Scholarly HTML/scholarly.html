@@ -1,155 +1,169 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>HiVi - Scholarly Raport</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
     <script src="node_modules/prismjs/prism.js" defer></script>
-  </head>
-  <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
-    <header><p class="title">HiVi - Scholary Raport</p></header>
-    <article id="what" typeof="schema:ScholarlyArticle" resource="#">
-      <h1>HiVi</h1>
-      <section>
+</head>
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+<header><p class="title">HiVi - Scholary Raport</p></header>
+<article id="what" typeof="schema:ScholarlyArticle" resource="#">
+    <h1>HiVi</h1>
+    <section>
         <ol>
-          <li property="schema:author" typeof="sa:ContributorRole">
-            <a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
-							<span property="schema:givenName">Denise</span>
-              <span property="schema:familyName">Goldan</span>
-            </a>
-            <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
-            <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
-            </sup>
-          </li>
-          <li property="schema:contributor" typeof="sa:ContributorRole">
-            <a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
-							<span property="schema:givenName">Cristina</span>
-              <span property="schema:familyName">Negruțu</span>
-            </a>
-            <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
-          </li>
+            <li property="schema:author" typeof="sa:ContributorRole">
+                <a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
+                    <span property="schema:givenName">Denise</span>
+                    <span property="schema:familyName">Goldan</span>
+                </a>
+                <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+                <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+                </sup>
+            </li>
+            <li property="schema:contributor" typeof="sa:ContributorRole">
+                <a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
+                    <span property="schema:givenName">Cristina</span>
+                    <span property="schema:familyName">Negruțu</span>
+                </a>
+                <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+            </li>
         </ol>
         <ol>
-          <a href="https://www.info.uaic.ro/bin/Main/">
-            <span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
-          </a>
+            <a href="https://www.info.uaic.ro/bin/Main/">
+                <span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
+            </a>
         </ol>
-      </section>
-      <section typeof="sa:Abstract" id="abstract">
+    </section>
+    <section typeof="sa:Abstract" id="abstract">
         <h2>Cuprins</h2>
         <ol>
-          <li>Descriere</li>
-          <li>Design general</li>
-          <li>Manieră de interacțiune cu utilizatorul</li>
-          <li>Date</li>
-          <li>Versionare</li>
-          <li>Resurse</li>
+            <li>Descriere</li>
+            <li>Design general</li>
+            <li>Manieră de interacțiune cu utilizatorul</li>
+            <li>Date</li>
+            <li>Versionare</li>
+            <li>Resurse</li>
         </ol>
-      </section>
-      <section typeof="sa:MaterialsAndMethods" id="description">
+    </section>
+    <section typeof="sa:MaterialsAndMethods" id="description">
         <h2>Descriere</h2>
-    		<p><strong>HiVi</strong> este o extensie de browser Web capabilă să ofere
-           utilizatorului maniere multiple de vizualizare a adreselor Web
-           favorite. Generează reprezentări grafice ce pot fi exportate în
-           formatele PNG și SVG. Oferă suport pentru customizarea interfeței
-           cu utilizatorul.</p>
-			</section>
-			<section typeof="sa:MaterialsAndMethods">
-	      <h2>Design general</h2>
-
-				<figure typeof="sa:Image">
-					<img src="images/views_sketch.png">
-					<figcaption>
-						 Schița paginii principale
-					</figcaption>
-				</figure>
-
-				<figure typeof="sa:Image">
-					<img src="images/settings_sketch.png">
-					<figcaption>
-						 Schița paginii de configurare a setărilor
-					</figcaption>
-				</figure>
+        <p><strong>HiVi</strong> este o extensie de browser Web capabilă să ofere
+            utilizatorului maniere multiple de vizualizare a adreselor Web
+            favorite. Generează reprezentări grafice ce pot fi exportate în
+            formatele PNG și SVG. Oferă suport pentru customizarea interfeței
+            cu utilizatorul.</p>
+    </section>
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>Design general</h2>
 
         <figure typeof="sa:Image">
-					<img src="images/list_view.png">
-				  <figcaption>
-						Mockup al metodei de vizualizare de tip ierarhire de directoare
-					</figcaption>
-				</figure>
+            <img src="images/views_sketch.png">
+            <figcaption>
+                Schița paginii principale
+            </figcaption>
+        </figure>
 
         <figure typeof="sa:Image">
-					<img src="images/pie_chart_view.png">
-					<figcaption>
-						Mockup al metodei de vizualizare de tip pie-chart
-					</figcaption>
-				</figure>
+            <img src="images/settings_sketch.png">
+            <figcaption>
+                Schița paginii de configurare a setărilor
+            </figcaption>
+        </figure>
 
         <figure typeof="sa:Image">
-					<img src="images/bar_chart_view.png">
-					<figcaption>
-						Mockup al metodei de vizualizare de tip bar-chart
-					</figcaption>
-				</figure>
+            <img src="images/list_view.png">
+            <figcaption>
+                Mockup al metodei de vizualizare de tip ierarhire de directoare
+            </figcaption>
+        </figure>
 
         <figure typeof="sa:Image">
-					<img src="images/settings.png">
-					<figcaption>
-						Mockup al paginii de configurare a setărilor
-					</figcaption>
-				</figure>
+            <img src="images/pie_chart_view.png">
+            <figcaption>
+                Mockup al metodei de vizualizare de tip pie-chart
+            </figcaption>
+        </figure>
 
         <figure typeof="sa:Image">
-					<img src="images/export.png">
-					<figcaption>
-						Mockup ce prezintă scenariul exportării diagramelor
-					</figcaption>
-				</figure>
+            <img src="images/bar_chart_view.png">
+            <figcaption>
+                Mockup al metodei de vizualizare de tip bar-chart
+            </figcaption>
+        </figure>
 
-      </section>
+        <figure typeof="sa:Image">
+            <img src="images/settings.png">
+            <figcaption>
+                Mockup al paginii de configurare a setărilor
+            </figcaption>
+        </figure>
 
-		<section typeof="sa:MaterialsAndMethods">
-			<h2>Maniera de interactiune cu utilizatorul</h2>
-			<p>Utilizatorul va putea alege sa vizualizeze datele provenite din marcaje in diverse maniere, punand la
-				dispozitia acestuia posibilitatea de a filtra dupa perioada in care au fost adaugate. </p>
-			<p>Optiunile disponibile pentru vizualizarea datelor sunt: lista, pie-chart si bar-chart. </p>
-			<p> In modul lista, datele pot fi consultate sub forma arborescenta data de structura de fisiere
-			in care utilizatorul a salvat marcajele. </p>
-			<p> In modul pie-chart, marcajele sunt distribuite in functie de numarul de marcaje de pe fiecare domeniu accesat.
-			De exemplu, daca utilizatorul are mai multe marcaje pe "Youtube", portiunea corespunzatoare acestui domeniu va fi mai mare
-				decat portiunea pentru un alt domeniu la care utilizatorul are un singur marcaj.
-			</p>
-			<p>In mod analog, datele sunt distribuite dupa frecventa marcajelor si in versiunea bar-chart. </p>
+        <figure typeof="sa:Image">
+            <img src="images/export.png">
+            <figcaption>
+                Mockup ce prezintă scenariul exportării diagramelor
+            </figcaption>
+        </figure>
 
-			<p>Prin intermediul butonului de setari aflat in dreapta-sus, utilizatorului ii este pusa la dispozitie
-				posibilitatea de a alege o serie de link-uri sau domenii care sa fie excluse din grafice. De asemenea,
-				acesta poate alege intre doua teme cromatice, una cu nuante mai deschise si una cu nuante intunecate
-				pentru configurarea aplicatiei.</p>
-			<p>Butonul de "Export" permite utilizatorului sa exporte in format SVG sau PNG graficele rezultate.</p>
-			<p> Filtrele din partea de sus au rolul de a filtra marcajele dupa perioada in care au fost adaugate.</p>
-		</section>
+    </section>
 
-			<section typeof="sa:MaterialsAndMethods">
-	      <h2>Versionare</h2>
-				<p>Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
-					utilitarul Git din terminal
-					pentru a rezolva conflictele și pentru a face modicări/adăugări/ștergeri
-					a unui sau a mai multor fișiere	din cadrul repository-ului. Am ales să
-					atasăm fiecărui commit un mesaj scurt si clar.</p>
-			</section>
-			<section typeof="sa:ReferenceList" id="references">
-	      <h2>Resurse</h2>
-	      <dl>
-					<dt>Chrome API</dt>
-	        <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
-	            resource="https://developer.chrome.com/extensions/bookmarks">
-	          <cite property="schema:name"><a
-	            href="https://developer.chrome.com/extensions/bookmarks">Chrome API for Javascript</a></cite>
-	        </dd>
-	      </dl>
-	    </section>
-		</article>
-  </body>
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>Maniera de interactiune cu utilizatorul</h2>
+        <p>Utilizatorul va putea alege sa vizualizeze datele provenite din marcaje in diverse maniere, punand la
+            dispozitia acestuia posibilitatea de a filtra dupa perioada in care au fost adaugate. </p>
+        <p>Optiunile disponibile pentru vizualizarea datelor sunt: lista, pie-chart si bar-chart. </p>
+        <p> In modul lista, datele pot fi consultate sub forma arborescenta data de structura de fisiere
+            in care utilizatorul a salvat marcajele. </p>
+        <p> In modul pie-chart, marcajele sunt distribuite in functie de numarul de marcaje de pe fiecare domeniu
+            accesat.
+            De exemplu, daca utilizatorul are mai multe marcaje pe "Youtube", portiunea corespunzatoare acestui domeniu
+            va fi mai mare
+            decat portiunea pentru un alt domeniu la care utilizatorul are un singur marcaj.
+        </p>
+        <p>In mod analog, datele sunt distribuite dupa frecventa marcajelor si in versiunea bar-chart. </p>
+
+        <p>Prin intermediul butonului de setari aflat in dreapta-sus, utilizatorului ii este pusa la dispozitie
+            posibilitatea de a alege o serie de link-uri sau domenii care sa fie excluse din grafice. De asemenea,
+            acesta poate alege intre doua teme cromatice, una cu nuante mai deschise si una cu nuante intunecate
+            pentru configurarea aplicatiei.</p>
+        <p>Butonul de "Export" permite utilizatorului sa exporte in format SVG sau PNG graficele rezultate.</p>
+        <p> Filtrele din partea de sus au rolul de a filtra marcajele dupa perioada in care au fost adaugate.</p>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>Arhitectura</h2>
+        <p>Proiectul este impartit in doua componente: <strong>Views</strong> si <strong>Settings</strong>.</p>
+        <p>Componenta <strong> Views</strong> gestioneaza subcomponentele legate de: bar-chart, pie-chart, lista
+            arborescenta, filtrele din partea de sus si meniul lateral.</p>
+        <p> Aceasta componenta foloseste Chrome API pentru a manipula bookmark-urile utilizatorului. Pentru generarea graficelor,
+            este </p>
+        <p> Componenta <strong>Settings</strong> gestioneaza subcomponenta legata de partea de excludere a domeniilor si
+        pe cea responsabila de schimbarea temelor cromatice.</p>
+
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods">
+        <h2>Versionare</h2>
+        <p>Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
+            utilitarul Git din terminal
+            pentru a rezolva conflictele și pentru a face modicări/adăugări/ștergeri
+            a unui sau a mai multor fișiere din cadrul repository-ului. Am ales să
+            atasăm fiecărui commit un mesaj scurt si clar.</p>
+    </section>
+    <section typeof="sa:ReferenceList" id="references">
+        <h2>Resurse</h2>
+        <dl>
+            <dt>Chrome API</dt>
+            <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
+                resource="https://developer.chrome.com/extensions/bookmarks">
+                <cite property="schema:name"><a
+                        href="https://developer.chrome.com/extensions/bookmarks">Chrome API for Javascript</a></cite>
+            </dd>
+        </dl>
+    </section>
+</article>
+</body>
 </html>

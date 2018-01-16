@@ -51,9 +51,7 @@ export class HiviService {
       console.log(splicedUrl)
       return;
     }
-    if(splicedUrl == "http://profs.info.uaic.ro"){
-      console.log("profs")
-    }
+
     if (typeof this.bookmarksList.find(item => item["key"] == splicedUrl) === "undefined") {
       let entry = {};
       entry["key"] = splicedUrl;

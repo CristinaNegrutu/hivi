@@ -1,39 +1,40 @@
 <div>
-	<div class="row">
-		<div class="col s1">
-			<side-menu (notifyThatSideMenuChanged)="updateAfterSideMenuSelectionChanged($event)"></side-menu>
-		</div>
-		<div *ngIf="whatViewToDisplay=='pie' || whatViewToDisplay=='bar'">
-			<div class="col s9 offset-s1 m6 offset-m1 l9 offset-l1">
-				<date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
-			</div>
-		</div>
-		<div class=" settings-button" style="position: relative;">
-			<a id="settings-button" routerLink="/settings" routerLinkActive="active" class="btn-floating btn-medium menu 26a69a"><i
-				class="material-icons">more_vert</i>
-			</a>
-			<br><br><br><br	>
-		</div>
-		<div class="col s10 offset-s1 m6 offset-m1 l10 offset-l1">
-			<div *ngIf="whatViewToDisplay=='pie'">
-				<pie-chart><pie-chart>
-			</div>
-			<div *ngIf="whatViewToDisplay=='list'">
-				<list-view></list-view>
-			</div>
-			<div *ngIf="whatViewToDisplay=='bar'">
-				<bar-chart></bar-chart>
-			</div>
-		</div>
-	</div>
-	<div *ngIf="whatViewToDisplay=='pie' || whatViewToDisplay=='bar'" class="fixed-action-btn">
-		<a class="btn-floating btn-large teal darken-4 export-button">
-			<i class="material-icons">save</i>
-		</a>
-		<ul>
-			<a class="export-button btn-floating teal lighten-1" (click)="downloadCanvasAsPNG($event)">PNG</a>
-			<a class="export-button btn-floating teal darken-2" (click)="downloadCanvasAsJPEG($event)">JPEG</a>
-		</ul>
-	</div>
+  <div class="row">
+    <div class="col s1">
+      <side-menu (notifyThatSideMenuChanged)="updateAfterSideMenuSelectionChanged($event)"></side-menu>
+    </div>
+    <div *ngIf="whatViewToDisplay=='pie' || whatViewToDisplay=='bar'">
+      <div class="col s9 offset-s1 m6 offset-m1 l9 offset-l1">
+        <date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
+      </div>
+    </div>
+    <div class=" settings-button" style="position: relative; z-index:0">
+      <a id="settings-button" routerLink="/settings" routerLinkActive="active"
+         class="btn-floating btn-medium menu 26a69a"><i
+        class="material-icons">more_vert</i>
+      </a>
+      <br><br><br><br>
+    </div>
+    <div class="col s10 offset-s1 m6 offset-m1 l10 offset-l1">
+      <div *ngIf="whatViewToDisplay=='pie'">
+        <pie-chart></pie-chart>
+      </div>
+      <div *ngIf="whatViewToDisplay=='list'">
+        <list-view></list-view>
+      </div>
+      <div *ngIf="whatViewToDisplay=='bar'">
+        <bar-chart></bar-chart>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="whatViewToDisplay=='pie' || whatViewToDisplay=='bar'" class="fixed-action-btn">
+    <a class="btn-floating btn-large teal darken-4 export-button">
+      <i class="material-icons">save</i>
+    </a>
+    <ul>
+      <a class="export-button btn-floating teal lighten-1" (click)="downloadCanvasAsPNG($event)">PNG</a>
+      <a class="export-button btn-floating teal darken-2" (click)="downloadCanvasAsJPEG($event)">JPEG</a>
+    </ul>
+  </div>
 </div>
 <router-outlet></router-outlet>
