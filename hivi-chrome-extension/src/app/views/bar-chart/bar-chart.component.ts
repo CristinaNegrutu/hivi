@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import {SimpleChanges} from '@angular/core';
+import {Subscription} from 'rxjs/Subscription';
 import {HiviService} from '../hivi.service';
 import {DateFilterComponent} from '../date-filter/date-filter.component';
 import {BaseChartDirective} from 'ng2-charts/ng2-charts';
@@ -20,10 +22,11 @@ export class BarChartComponent implements OnInit {
   public barChartType: string;
   public barChartLegend: boolean;
   public barChartData: any[];
+  public subscription: Subscription;
+	public should = "1";
 
   ngOnInit(): void {
     this.hiviService.dumpBookmarks();
-
     this.barChartLabels = this.hiviService.getBarChartLabels();
     this.barChartData = this.hiviService.getBarChartData();
     this.barChartOptions = {
@@ -49,40 +52,42 @@ export class BarChartComponent implements OnInit {
           }
         }]
       }
-
     };
     this.barChartType = 'bar';
     this.barChartLegend = true;
-    // this.filters.shouldRefreshChart = false;
-    setInterval(() => {
-      console.log("Refreshing")
-      console.log(this.filters.shouldRefreshChart)
 
-      if (this.filters.shouldRefreshChart == true) {
-        console.log("Refreshing ??????????????????????????????????")
-
-        this.chart.chart = this.chart.getChartBuilder(this.chart.ctx);
-
-
-        this.barChartData = this.hiviService.getBarChartData();
-        this.barChartLabels = this.hiviService.getBarChartLabels();
-
-        this.chart.chart.refresh()
-
-      }
-      console.log("Refreshing !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
-    }, 1000);
-
+    // this.subscription = this.filters.shouldRefreshChart
+    //   .subscribe(data => {
+    //     console.log("refresh");
+		//
+    //     this.refresh();
+    //   })
   }
 
-  public refresh(): void {
-    console.log("refresh2");
+  // public refresh(): void {
+	// 	if (this.filters.shouldRefreshChart) {
+	// 		console.log("Redrawing chart...");
+	// 		this.barChartData = this.hiviService.getBarChartData();
+	// 		this.barChartLabels = this.hiviService.getBarChartLabels();
+	// 		this.chart.chart.update();
+	// 		this.filters.shouldRefreshChart = false;
+	// 	} else {
+	// 		console.log("Nothing to refresh...");
+	// 	}
+  // }
 
-
-    // this.chart.chart.refresh()
+	public redrawChart(): void {
+		if (localStorage.getItem("shouldRefreshChart")==="1") {
+			console.log("Redrawing chart...");
+			this.barChartData = this.hiviService.getBarChartData();
+			this.barChartLabels = this.hiviService.getBarChartLabels();
+			this.chart.chart.update();
+			localStorage.setItem("shouldRefreshChart", "0");
+			console.log("aaa");
+		} else {
+			console.log("Nothing to refresh...");
+		}
   }
-
 
   public chartClicked(e: any): void {
     console.log(e);
@@ -93,6 +98,5 @@ export class BarChartComponent implements OnInit {
   public chartHovered(e: any): void {
     console.log(e);
   }
-
 
 }

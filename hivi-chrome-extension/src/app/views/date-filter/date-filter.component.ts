@@ -20,6 +20,7 @@ export class DateFilterComponent implements OnInit {
   public shouldRefreshChart = true;
 
 
+
   @Output() notifyThatSelectedFilterChanged = new EventEmitter<string>();
 
   updateDataFilterValue(value: string): void {
@@ -29,6 +30,7 @@ export class DateFilterComponent implements OnInit {
 
     this.hiviService.filterByInterval(value);
     this.shouldRefreshChart = true;
+		localStorage.setItem("shouldRefreshChart", "1");
 
   }
 
