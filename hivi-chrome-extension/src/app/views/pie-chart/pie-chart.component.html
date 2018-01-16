@@ -1,8 +1,9 @@
 <div style="display: block">
-	<canvas baseChart
+	<canvas baseChart #myPieChart="base-chart"
 	[data]="pieChartData"
 	[labels]="pieChartLabels"
 	[chartType]="pieChartType"
 	(chartHover)="chartHovered($event)"
 	(chartClick)="chartClicked($event)"></canvas>
 </div>
+{{redrawChart()}}

@@ -1,33 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {BaseChartDirective} from 'ng2-charts/ng2-charts';
 
-import { HiviService } from '../hivi.service';
+import {HiviService} from '../hivi.service';
 
 @Component({
-	selector: 'pie-chart',
-	templateUrl: './pie-chart.component.html'
+  selector: 'pie-chart',
+  templateUrl: './pie-chart.component.html'
 })
 export class PieChartComponent implements OnInit {
 
-	constructor(public hiviService: HiviService) {}
+  constructor(public hiviService: HiviService) {
+  }
 
-	public pieChartLabels: string[];
-	public pieChartData: number[];
-	public pieChartType: string;
+  @ViewChild('myPieChart') chart: BaseChartDirective;
 
-	ngOnInit(): void {
+  public pieChartLabels: string[];
+  public pieChartData: number[];
+  public pieChartType: string;
+
+  ngOnInit(): void {
     this.hiviService.dumpBookmarks();
 
     this.pieChartLabels = this.hiviService.getPieChartsLabels();
-		this.pieChartData = this.hiviService.getPieChartData();
-		this.pieChartType = 'pie';
-	}
+    this.pieChartData = this.hiviService.getPieChartData();
+    this.pieChartType = 'pie';
+  }
 
-	public chartClicked(e:any):void {
-		console.log(e);
-	}
+  public chartClicked(e: any): void {
+    return;
 
-	public chartHovered(e:any):void {
-		console.log(e);
-	}
+  }
+
+  public chartHovered(e: any): void {
+    return;
+  }
+
+  public redrawChart(): void {
+    if (localStorage.getItem("shouldRefreshChart")==="1") {
+      console.log("BarChartComponent: redrawChart() method call...");
+      this.pieChartData = this.hiviService.getPieChartData();
+      this.pieChartLabels = this.hiviService.getPieChartsLabels();
+      this.chart.chart = this.chart.getChartBuilder(this.chart.ctx);
+
+      this.chart.chart.update();
+      localStorage.setItem("shouldRefreshChart", "0");
+    }
+  }
 
 }

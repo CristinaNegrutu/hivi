@@ -1,6 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {SimpleChanges} from '@angular/core';
-import {Subscription} from 'rxjs/Subscription';
 import {HiviService} from '../hivi.service';
 import {DateFilterComponent} from '../date-filter/date-filter.component';
 import {BaseChartDirective} from 'ng2-charts/ng2-charts';
@@ -22,7 +20,6 @@ export class BarChartComponent implements OnInit {
   public barChartType: string;
   public barChartLegend: boolean;
   public barChartData: any[];
-  public subscription: Subscription;
 	public shouldRefreshChartDefault = localStorage.getItem("shouldRefreshChart")==="1";
 
   ngOnInit(): void {
@@ -62,7 +59,9 @@ export class BarChartComponent implements OnInit {
 			console.log("BarChartComponent: redrawChart() method call...");
 			this.barChartData = this.hiviService.getBarChartData();
 			this.barChartLabels = this.hiviService.getBarChartLabels();
-			this.chart.chart.update();
+      this.chart.chart = this.chart.getChartBuilder(this.chart.ctx);
+
+      this.chart.chart.update();
 			localStorage.setItem("shouldRefreshChart", "0");
 		}
   }
