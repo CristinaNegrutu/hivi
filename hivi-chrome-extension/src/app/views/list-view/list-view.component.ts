@@ -46,17 +46,15 @@ export class ListViewComponent implements AfterViewInit {
 
   expandTree(dummyArray, domItem): void {
 
-
     jQuery('#' + domItem).append('<ul class="collapsible" data-collapsible="accordion">');
     let i;
 
     let rootNodes = dummyArray.children;
 
     for (i = 0; i < rootNodes.length; i++) {
-      let classSelector = this.generateRandomId("asd");
 
       jQuery('#' + domItem + ' ul').append(
-        '  <li id="' + classSelector + '" >\n' +
+        '  <li >\n' +
         '    <div class="collapsible-header grey lighten-2">\n' +
         '      <i class="material-icons">folder</i>' + dummyArray.children[i].title + '\n' +
         '    </div>\n'
@@ -85,12 +83,4 @@ export class ListViewComponent implements AfterViewInit {
 
     jQuery('' + domItem).append('</ul>');
   }
-
-
-
-  generateRandomId(domItem): string {
-    let randomNumber = Math.floor(Math.random() * (50 - 1 + 1)) + 1;
-    return domItem + randomNumber;
-  }
-
 }

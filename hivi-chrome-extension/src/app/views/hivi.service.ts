@@ -162,7 +162,7 @@ export class HiviService {
     for (i = 0; i < mostBookmarked.length; i++) {
       labels.push(mostBookmarked[i].key)
     }
-    console.log(labels)
+
     return labels
   }
 
@@ -174,8 +174,6 @@ export class HiviService {
     for (i = 0; i < mostBookmarked.length; i++) {
       values.push(mostBookmarked[i].value.occurrences)
     }
-    console.log(values)
-
 
     return [
       {data: values, label: 'Your most bookmarked sites'}

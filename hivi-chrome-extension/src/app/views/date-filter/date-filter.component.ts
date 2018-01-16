@@ -25,9 +25,8 @@ export class DateFilterComponent implements OnInit {
     this.selectedFilter = value;
     this.hiviService.filterByInterval(value);
     this.shouldRefreshChart = true;
-		localStorage.setItem("shouldRefreshChart", "1");
-		console.log("DateFilterComponent, shouldRefreshChart = "
-		+ localStorage.getItem("shouldRefreshChart"));
+    localStorage.setItem("shouldRefreshChart", "1");
+    console.log("DateFilterComponent, shouldRefreshChart = " + localStorage.getItem("shouldRefreshChart"));
   }
 
   ngOnInit() {

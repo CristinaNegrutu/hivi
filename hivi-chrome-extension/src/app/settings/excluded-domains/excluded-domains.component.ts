@@ -13,27 +13,47 @@ export class ExcludedDomainsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getExcludedDomains();
-    if (typeof localStorage.getItem("excluded_domains_count") === "undefined") {
-      localStorage.setItem("excluded_domains_count", "0")
+    this.excludedDomains = this.getExcludedDomains();
+  }
+
+  getExcludedDomains() {
+
+    if (typeof localStorage.getItem("excluded_domains") == "undefined") {
+      return []
+    } else {
+      return JSON.parse(localStorage.getItem("excluded_domains"));
+
     }
   }
 
-  getExcludedDomains(): void {
-    this.domainsService.getExcludedDomains()
-      .subscribe(results => this.excludedDomains = results);
-  }
-
   addDomainToList(domainName): void {
-    this.domainsService.addDomainToList(domainName);
-    console.log("ExcludedDomainsComponent: number of excluded domains = "
-      + this.excludedDomains.length);
+
+    let domains;
+    if (typeof localStorage.getItem("excluded_domains") == "undefined") {
+      console.log("shit is getting cleaned");
+      domains = []
+    } else {
+      domains = JSON.parse(localStorage.getItem("excluded_domains"));
+
+    }
+    if (domains.indexOf(domainName) === -1) {
+      domains.push(domainName);
+      localStorage.setItem("excluded_domains", null)
+      this.excludedDomains = domains;
+      localStorage.setItem("excluded_domains", JSON.stringify(domains));
+    }
+
   }
 
   deleteDomainFromList(domainName: string, index: number) {
-    this.domainsService.deleteDomainFromList(domainName, index);
-    console.log("ExcludedDomainsComponent: number of excluded domains = "
-      + this.excludedDomains.length);
+
+    let domains = JSON.parse(localStorage.getItem("excluded_domains"));
+    domains = domains.filter(item => item !== domainName);
+
+    this.excludedDomains = domains;
+
+    localStorage.setItem("excluded_domains", null);
+    localStorage.setItem("excluded_domains", JSON.stringify(domains));
   }
 
 }
