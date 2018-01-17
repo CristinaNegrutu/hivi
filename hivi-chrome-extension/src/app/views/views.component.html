@@ -1,5 +1,5 @@
 <div>
-  <div class="row">
+  <div class="row" style="position: relative;">
     <div class="col s1">
       <side-menu (notifyThatSideMenuChanged)="updateAfterSideMenuSelectionChanged($event)"></side-menu>
     </div>
@@ -8,7 +8,7 @@
         <date-filter (notifyThatSelectedFilterChanged)="updateAfterDateFilterValueChanged($event)"></date-filter>
       </div>
     </div>
-    <div class=" settings-button" style="position: relative; z-index:0">
+    <div>
       <a id="settings-button" routerLink="/settings" routerLinkActive="active"
          class="btn-floating btn-medium menu 26a69a"><i
         class="material-icons">more_vert</i>
