@@ -1,326 +1,466 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>HiVi - Scholarly Raport</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
-    <script src="node_modules/prismjs/prism.js" defer></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>HiVi - Scholarly Raport</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
+	<script src="node_modules/prismjs/prism.js" defer></script>
 </head>
+
 <body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
-<header><p class="title">HiVi - Scholary Raport</p></header>
-<article id="what" typeof="schema:ScholarlyArticle" resource="#">
-    <h1>HiVi</h1>
-    <section>
-        <ol>
-            <li property="schema:author" typeof="sa:ContributorRole">
-                <a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
-                    <span property="schema:givenName">Denise</span>
-                    <span property="schema:familyName">Goldan</span>
-                </a>
-                <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
-                <sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
-                </sup>
-            </li>
-            <li property="schema:contributor" typeof="sa:ContributorRole">
-                <a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
-                    <span property="schema:givenName">Cristina</span>
-                    <span property="schema:familyName">Negruțu</span>
-                </a>
-                <a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
-            </li>
-        </ol>
-        <ol>
-            <a href="https://www.info.uaic.ro/bin/Main/">
-                <span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
-            </a>
-        </ol>
-    </section>
-    <section typeof="sa:Abstract" id="abstract">
-        <h2>Cuprins</h2>
-        <ol>
-            <li>Descriere</li>
-            <li>Design general</li>
-            <li>Manieră de interacțiune cu utilizatorul</li>
-            <li>Date</li>
-            <li>Versionare</li>
-            <li>Resurse</li>
-        </ol>
-    </section>
-    <section typeof="sa:MaterialsAndMethods" id="description">
-        <h2>Descriere</h2>
-        <p><strong>HiVi</strong> este o extensie de browser Web capabilă să ofere
-            utilizatorului maniere multiple de vizualizare a adreselor Web
-            favorite. Generează reprezentări grafice ce pot fi exportate în
-            formatele PNG și SVG. Oferă suport pentru customizarea interfeței
-            cu utilizatorul.</p>
-    </section>
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Design general</h2>
 
-        <figure typeof="sa:Image">
-            <img src="images/views_sketch.png">
-            <figcaption>
-                Schița paginii principale
-            </figcaption>
-        </figure>
+	<header><p class="title">HiVi - Scholary Raport</p></header>
+	<article id="what" typeof="schema:ScholarlyArticle" resource="#">
 
-        <figure typeof="sa:Image">
-            <img src="images/settings_sketch.png">
-            <figcaption>
-                Schița paginii de configurare a setărilor
-            </figcaption>
-        </figure>
+		<h1>HiVi</h1>
 
-        <figure typeof="sa:Image">
-            <img src="images/list_view.png">
-            <figcaption>
-                Mockup al metodei de vizualizare de tip ierarhire de directoare
-            </figcaption>
-        </figure>
+		<section>
+			<ol>
+				<li property="schema:author" typeof="sa:ContributorRole">
+					<a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
+						<span property="schema:givenName">Denise</span>
+						<span property="schema:familyName">Goldan</span>
+					</a>
+					<a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+					<sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+					</sup>
+				</li>
+				<li property="schema:contributor" typeof="sa:ContributorRole">
+					<a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
+						<span property="schema:givenName">Cristina</span>
+						<span property="schema:familyName">Negruțu</span>
+					</a>
+					<a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+				</li>
+			</ol>
+			<ol>
+				<a href="https://www.info.uaic.ro/bin/Main/">
+					<span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
+				</a>
+			</ol>
+		</section>
 
-        <figure typeof="sa:Image">
-            <img src="images/pie_chart_view.png">
-            <figcaption>
-                Mockup al metodei de vizualizare de tip pie-chart
-            </figcaption>
-        </figure>
+		<section typeof="sa:Abstract" id="abstract">
+			<h2>Cuprins</h2>
+			<ol>
+				<li>Descriere</li>
+				<li>Design general</li>
+				<li>Maniera de interacțiune cu utilizatorul</li>
+				<li>Arhitectură</li>
+				<li>Testare</li>
+				<li>Exploatarea soluției</li>
+				<li>Date</li>
+				<li>Versionare</li>
+				<li>Resurse</li>
+			</ol>
+		</section>
 
-        <figure typeof="sa:Image">
-            <img src="images/bar_chart_view.png">
-            <figcaption>
-                Mockup al metodei de vizualizare de tip bar-chart
-            </figcaption>
-        </figure>
+		<section typeof="sa:MaterialsAndMethods" id="description">
+			<h2>Descriere</h2>
+			<p><strong>HiVi</strong> este o extensie de browser Web capabilă să ofere
+				utilizatorului maniere multiple de vizualizare a adreselor Web
+				favorite. Generează reprezentări grafice ce pot fi exportate în
+				formatele PNG și SVG. Oferă suport pentru customizarea interfeței
+				cu utilizatorul.
+			</p>
+		</section>
 
-        <figure typeof="sa:Image">
-            <img src="images/settings.png">
-            <figcaption>
-                Mockup al paginii de configurare a setărilor
-            </figcaption>
-        </figure>
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Design general</h2>
 
-        <figure typeof="sa:Image">
-            <img src="images/export.png">
-            <figcaption>
-                Mockup ce prezintă scenariul exportării diagramelor
-            </figcaption>
-        </figure>
+			<figure typeof="sa:Image">
+				<img src="images/views_sketch.png">
+				<figcaption>
+					Schița paginii principale
+				</figcaption>
+			</figure>
 
-    </section>
+			<figure typeof="sa:Image">
+				<img src="images/settings_sketch.png">
+				<figcaption>
+					Schița paginii de configurare a setărilor
+				</figcaption>
+			</figure>
 
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Maniera de interacțiune cu utilizatorul</h2>
-        <p>Utilizatorul va putea alege să vizualizeze datele provenite din marcaje în diverse maniere, punând la
-            dispoziția acestuia posibilitatea de a filtra după perioada în care au fost adăugate. </p>
-        <p>Opțiunile disponibile pentru vizualizarea datelor sunt: listă, pie-chart și bar-chart. </p>
-        <p> În modul listă, datele pot fi consultate sub forma arborescentă dată de structură de fișiere
-            în care utilizatorul a salvat marcajele. </p>
-        <p> În modul pie-chart, marcajele sunt distribuite în funcție de numărul de marcaje de pe fiecare domeniu
-            accesat.
-            De exemplu, dacă utilizatorul are mai multe marcaje pe "Youtube", porțiunea corespunzătoare acestui domeniu
-            va fi mai mare
-            decât porțiunea pentru un alt domeniu la care utilizatorul are un singur marcaj.
-        </p>
-        <p>În mod analog, datele sunt distribuite după frecvența marcajelor și în versiunea bar-chart. </p>
+			<figure typeof="sa:Image">
+				<img src="images/list_view.png">
+				<figcaption>
+					Mockup al metodei de vizualizare de tip ierarhire de directoare
+				</figcaption>
+			</figure>
 
-        <p>Prin intermediul butonului de setări aflat în dreapta-sus, utilizatorului îi este pusă la dispoziție
-            posibilitatea de a alege o serie de link-uri sau domenii care să fie excluse din grafice. De asemenea,
-            acesta poate alege între două teme cromatice, una cu nuanțe mai deschise și una cu nuanțe întunecate
-            pentru configurarea aplicației.</p>
-        <p>Butonul de "Export" permite utilizatorului să exporte în format SVG sau PNG graficele rezultate.</p>
-        <p> Filtrele din partea de sus au rolul de a filtra marcajele după perioadă în care au fost adăugate.</p>
-    </section>
+			<figure typeof="sa:Image">
+				<img src="images/pie_chart_view.png">
+				<figcaption>
+					Mockup al metodei de vizualizare de tip pie-chart
+				</figcaption>
+			</figure>
 
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Arhitectura</h2>
-        <p>Proiectul este împărțit în două componente: <strong>Views</strong> și <strong>Settings</strong>.</p>
-        <h4>Views</h4>
-        <p>Componenta <strong> Views</strong> gestionează subcomponentele legate de: bar-chart, pie-chart, lista
-            arborescentă, filtrele din partea de sus și meniul lateral.</p>
-        <p> Această componenta folosește Chrome API pentru a manipula bookmark-urile utilizatorului. Pentru generarea
-            graficelor,
-            este utilizat modulul ng2-charts, care desenează grafice pe baza unui set de date. </p>
-        <figure typeof="sa:Image">
-            <img src="images/1.png">
-            <figcaption>
-                Componenta Views, subcomponenta Pie-chart
-            </figcaption>
-        </figure>
-        <figure typeof="sa:Image">
-            <img src="images/3.png">
-            <figcaption>
-                Componenta Views, subcomponenta Bar chart
-            </figcaption>
-        </figure>
+			<figure typeof="sa:Image">
+				<img src="images/bar_chart_view.png">
+				<figcaption>
+					Mockup al metodei de vizualizare de tip bar-chart
+				</figcaption>
+			</figure>
 
-        <p> Componentele manipulează vizualizarea bookmark-urile utilizatorului conectat prin contul de Google în
-            browserul Chrome
-            prin intermediul unui serviciu care filtrează și prelucrează datele în funcție de domeniile excluse și de
-            intervalul selectat.</p>
-        <figure typeof="sa:Image">
-            <img src="images/2.png">
-            <figcaption>
-                Componenta Views, subcomponenta List view
-            </figcaption>
-        </figure>
-        <p>Această componentă imită structură arborescentă a folderelor create de utilizator în bara de marcaje, fiind
-            expandabile la click
-            și permițând utilizatorului să acceseze marcajele prin intermediul hyperlink-urilor.</p>
+			<figure typeof="sa:Image">
+				<img src="images/settings.png">
+				<figcaption>
+					Mockup al paginii de configurare a setărilor
+				</figcaption>
+			</figure>
 
-        <figure typeof="sa:Image">
-            <img src="images/4.png">
-            <figcaption>
-                Componenta Views, subcomponenta Date filters
-            </figcaption>
-        </figure>
-        <p> Prin intermediul filtrelor, se selecteaza un interval cu ajutorul căruia se filtrează bookmark-urile după
-            data la care au fost adăugate.</p>
-        <figure typeof="sa:Image">
-            <img src="images/8.png">
-            <figcaption>
-                Butoane responsabile pentru realizarea exportului in PNG sau JPEG
-            </figcaption>
-        </figure>
-        <p> Butoanele de export creeaza o captură a elementului <STRONG>canvas</STRONG> pe care sunt desenate
-            graficele din componenta bar-chart și pie-chart. Acestea ofera utilizatorului posibilitatea de a salva in
-            PNG sau JPEG graficele cu filtre și domenii excluse aplicate.
-        </p>
-        <h4>Settings</h4>
+			<figure typeof="sa:Image">
+				<img src="images/export.png">
+				<figcaption>
+					Mockup ce prezintă scenariul exportării diagramelor
+				</figcaption>
+			</figure>
 
-        <p> Componenta <strong>Settings</strong> gestionează subcomponenta legată de partea de excludere a domeniilor,
-            <strong>Excluded domains</strong> și
-            pe cea responsabilă de schimbarea temelor cromatice, <strong>Themes</strong>.</p>
-        <figure typeof="sa:Image">
-            <img src="images/5.png">
-            <figcaption>
-                Componenta Settings
-            </figcaption>
-        </figure>
-        <p> Accesată pe baza butonului din dreapta sus din componenta Views, componenta Settings permite utilizatorului
-            să personalizeze
-            anumite aspecte ale utlizarii aplicației, precum tema cromatică.
-        </p>
-        <figure typeof="sa:Image">
-            <img src="images/7.png">
-            <figcaption>
-                Componenta Settings, subcomponenta Themes
-            </figcaption>
-        </figure>
-        <p>Tema aleasă de utilizator este salvată în <strong>localstorage</strong> care, în browserul Chrome, nu are
-            dată de expirare.
-            Culoarea de fundal, precum și etichetele graficelor se modifică în funcție de tema selectată.
-        </p>
-        <figure typeof="sa:Image">
-            <img src="images/6.png">
-            <figcaption>
-                Componenta Settings, subcomponenta Excluded domains
-            </figcaption>
-        </figure>
-        <p>Utilizatorul poate introduce o serie de domenii pe care nu dorește să le vadă în grafice. Acestea sunt
-            salvate, de asemenea,
-            în localstorage</strong>, care este consultat de fiecare dată când se redeseneaza un grafic.</p>
-    </section>
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Testare</h2>
-        <p> În ceea ce privește testarea, fiecare schimbare din cod a fost testată manual în environmentul de dezvoltare
-            și în cel de producție.</p>
-        <p>Dat fiind că aplicația reprezintă o extensie pentru browserul Chrome, testarea s-a făcut
-            doar pe acesta. Am urmărit ca aplicația să fie și mobile friendly (spre exemplu, meniul lateral este un
-            dropdown
-            pentru telefoanele mobile).</p>
+		</section>
 
-    </section>
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Maniera de interacțiune cu utilizatorul</h2>
+			<p>
+				Utilizatorul va putea alege să vizualizeze datele provenite din marcaje în diverse maniere, punând la
+				dispoziția acestuia posibilitatea de a filtra după perioada în care au fost adăugate.
+			</p>
+			<p>
+				Opțiunile disponibile pentru vizualizarea datelor sunt: listă, pie-chart și bar-chart.
+			</p>
+			<p>
+				În modul listă, datele pot fi consultate sub forma arborescentă dată de structură de fișiere
+				în care utilizatorul a salvat marcajele.
+			</p>
+			<p>
+				În modul pie-chart, marcajele sunt distribuite în funcție de numărul de marcaje de pe fiecare domeniu
+				accesat.
+				De exemplu, dacă utilizatorul are mai multe marcaje pe "Youtube", porțiunea corespunzătoare acestui domeniu
+				va fi mai mare
+				decât porțiunea pentru un alt domeniu la care utilizatorul are un singur marcaj.
+			</p>
+			<p>
+				În mod analog, datele sunt distribuite după frecvența marcajelor și în versiunea bar-chart.
+			</p>
+			<p>
+				Prin intermediul butonului de setări aflat în dreapta-sus, utilizatorului îi este pusă la dispoziție
+				posibilitatea de a alege o serie de link-uri sau domenii care să fie excluse din grafice. De asemenea,
+				acesta poate alege între două teme cromatice, una cu nuanțe mai deschise și una cu nuanțe întunecate
+				pentru configurarea aplicației.
+			</p>
+			<p>
+				Butonul de "Export" permite utilizatorului să exporte în format SVG sau PNG graficele rezultate.
+			</p>
+			<p>
+				Filtrele din partea de sus au rolul de a filtra marcajele după perioadă în care au fost adăugate.
+			</p>
+		</section>
 
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Exploatarea soluției</h2>
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Arhitectură</h2>
+			<h3>Modularizare</h3>
+			<p>
+				Legat de arhitectura aplicației, putem vorbi despre modularizarea proiectului.
+				Dat fiind că există 2 mari componente, <strong>Views</strong> și <strong>Settings</strong>,
+				am decis ca cele 2 să fie 2 module de sine stătătoare. Cele 2,  modulul "views" și modulul "settings", sunt
+				ușor de găsit la același nivel în structura arborescentă de directoare a proiectului.
+				Activitatea lor este gestionată de un modul-părinte, cu simplu rol de container.
+				Acest aspect permite refolosirea codului, și modificarea modulelor independent, fără side effects.
+				Tot în același scop am decis să împărțim în componente independente toate elementele din cele 2 module.
+				Așadar, fiecare componentă are un director dedicat, ce conține un fișier pentru elementele de CSS, unul pentru partea de markup (HTML) și unul pentru TypeScript.
+			</p>
+			<h3>Views</h3>
+			<p>
+				Componenta <strong> Views</strong> gestionează subcomponentele legate de: bar-chart, pie-chart, lista
+				arborescentă, filtrele din partea de sus și meniul lateral.
+			</p>
+			<p>
+				Această componenta folosește Chrome API pentru a manipula bookmark-urile utilizatorului. Pentru generarea
+				graficelor,
+				este utilizat modulul ng2-charts, care desenează grafice pe baza unui set de date.
+			</p>
 
+			<figure typeof="sa:Image">
+				<img src="images/1.png">
+				<figcaption>
+					Modulul Views, componenta Pie-Chart
+				</figcaption>
+			</figure>
 
-        <p> HiVi este o extensie de browser Web, dezvoltată în particular pentrul browseul Chrome, capabilă să ofere
-            utilizatorului
-            maniere multiple de vizualizare a adreselor web favorite. Pentru această, adresele web sunt extrase din
-            salvările utilizatorului,
-            adică din "chrome://bookmarks/".</p>
+			<figure typeof="sa:Image">
+				<img src="images/3.png">
+				<figcaption>
+					Modulul Views, componenta Bar-Chart
+				</figcaption>
+			</figure>
 
-        <h4>Views</h4>
-        <figure typeof="sa:Image">
-            <img src="images/1.png">
-            <figcaption>
-                Componenta Views, subcomponenta Pie-chart
-            </figcaption>
-        </figure>
-        <p>Pagină dedicată reprezentărilor grafic se găsește la url-ul terminat în "/views".
+			<p>
+				Componentele manipulează vizualizarea bookmark-urile utilizatorului conectat prin contul de Google în
+				browserul Chrome
+				prin intermediul unui serviciu care filtrează și prelucrează datele în funcție de domeniile excluse și de
+				intervalul selectat.
+			</p>
 
-            Selectarea manierei curente de vizualizare se face prin meniul lateral (în varianta desktop), prin simpla
-            alegere a uneia dintre cele 3 reprezentări minimale ale opțiunilor, respectiv meniul dropdown (variantă
-            mobile-friendly).
+			<figure typeof="sa:Image">
+				<img src="images/2.png">
+				<figcaption>
+					Modulul Views, componenta List-View
+				</figcaption>
+			</figure>
 
-        </p>
-        <p> O prima manieră de vizualizare este cea de "list view". Folderele sunt grupate într-o listă care, odată
-            accesată, se extinde într-o colecție de elemente, unde fiecare element reprezintă un site individual din
-            cele favorite, care poate fi accesat într-un new tab, tot prin click.
+			<p>
+				Această componentă imită structură arborescentă a folderelor create de utilizator în bara de marcaje, fiind
+				expandabile la click și permițând utilizatorului să acceseze marcajele prin intermediul hyperlink-urilor.
+			</p>
 
-            A două manieră este dată de "bar-chart". Aceasta are în plus, față de "list view", opțiunea dedicată
-            filtrării linkurilor de la bookmarks în funcție de data adăugării. Pentru aceasta, poate alege una din cele
-            patru setări de filtrare prestabilite: "Today", "Last week", "Last month", respectiv "All time". De
-            asemenea, poate alege să salveze local diagramele, folosindu-se de butonul de export din dreaptă jos a
-            ecranului. Prin click sau hover deasupra acestui buton, utilizatorul primește opțiunile de exportare a
-            diagramei în formatele PNG și SVG. Pentru că datele să fie ușor de interpretata, am limitat numărul maxim de
-            linkuri randate la 10. Tot în același scop, ele sunt ordonate descrescător după numărul de bookmark-uri
-            făcute asupra aceluiași domeniu.
+			<figure typeof="sa:Image">
+				<img src="images/4.png">
+				<figcaption>
+					Modulul Views, componenta Date-filter
+				</figcaption>
+			</figure>
 
-        </p>
-        <p> O a treia manieră de vizualizare este cea de "pie-chart". Există aceeași restricție a numărului de linkuri
-            randate (maximul este tot 10).
-            Se păstrează opțiunea de filtrare după data și cea de salvare a diagramelor în sistemul local de fișiere.
-        </p>
-        <h4>Settings</h4>
-        <figure typeof="sa:Image">
-            <img src="images/5.png">
-            <figcaption>
-                Componenta Settings
-            </figcaption>
-        </figure>
-        <p> Extensia web oferă suport pentru customizarea interfeței cu utilizatorul. Pentru această, se va folosi de
-            pagină "/settings", unde poate ajunge prin butonul dedicat din colțul din dreapta sus. Partea de jos a
-            ecranului este data de două pictograme, care reprezintă setări prestabilite de schimbare a cromaticii, ce
-            acoperă 2 teme: "deschis"(LIGHT THEME) și "închis" (DARK THEME).
-        </p>
-        <figure typeof="sa:Image">
-            <img src="images/9.png">
-            <figcaption>
-                Componenta Views cu tema cromatica inchisa
-            </figcaption>
-        </figure>
-        <p>
-            Tot în pagina de setări, utilizatorul poate formula o lista de domenii care să fie excluse din
-            reprezentările grafice de pe pagina "/views". Lista poate fi ușor modificată, prin adăugarea și ștergerea de
-            link-uri. Un efect asemanatror îl are apăsarea url-ului din diagramele de "pie-chart" și "bar-chart":
-            acțiunea face excluderea până la următorul click a elementului selectat din diagrama.
+			<p>
+				Prin intermediul filtrelor, se selecteaza un interval cu ajutorul căruia se filtrează bookmark-urile după
+				data la care au fost adăugate.
+			</p>
 
-            Pentru revenirea la pagină de "/views", utilizatorul se poate folosi de butonul etichetată cu "Back".
-        </p>
-    </section>
-    <section typeof="sa:MaterialsAndMethods">
-        <h2>Versionare</h2>
-        <p>Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
-            utilitarul Git din terminal
-            pentru a rezolva conflictele și pentru a face modicări/adăugări/ștergeri
-            a unui sau a mai multor fișiere din cadrul repository-ului. Am ales să
-            atasăm fiecărui commit un mesaj scurt si clar.</p>
-    </section>
-    <section typeof="sa:ReferenceList" id="references">
-        <h2>Resurse</h2>
-        <dl>
-            <dt>Chrome API</dt>
-            <dd id="ref-sa-ontology" typeof="schema:ScholarlyArticle"
-                resource="https://developer.chrome.com/extensions/bookmarks">
-                <cite property="schema:name"><a
-                        href="https://developer.chrome.com/extensions/bookmarks">Chrome API for Javascript</a></cite>
-            </dd>
-        </dl>
-    </section>
-</article>
+			<figure typeof="sa:Image">
+				<img src="images/8.png">
+				<figcaption>
+					Butoane responsabile pentru realizarea exportului in PNG sau JPEG
+				</figcaption>
+			</figure>
+
+			<p>
+				Butoanele de export creeaza o captură a elementului <STRONG>canvas</STRONG> pe care sunt desenate
+				graficele din componenta bar-chart și pie-chart. Acestea ofera utilizatorului posibilitatea de a salva in
+				PNG sau JPEG graficele cu filtre și domenii excluse aplicate.
+			</p>
+
+			<h3>Settings</h3>
+
+			<p>
+				Componenta <strong>Settings</strong> gestionează subcomponenta legată de partea de excludere a domeniilor,
+				<strong>Excluded domains</strong> și
+				pe cea responsabilă de schimbarea temelor cromatice, <strong>Themes</strong>.
+			</p>
+
+			<figure typeof="sa:Image">
+				<img src="images/5.png">
+				<figcaption>
+					Componenta Settings
+				</figcaption>
+			</figure>
+
+			<p>
+				Accesată pe baza butonului din dreapta sus din componenta Views, componenta Settings permite utilizatorului
+				să personalizeze
+				anumite aspecte ale utlizarii aplicației, precum tema cromatică.
+			</p>
+
+			<figure typeof="sa:Image">
+				<img src="images/7.png">
+				<figcaption>
+					Componenta Settings, subcomponenta Themes
+				</figcaption>
+			</figure>
+
+			<p>
+				Tema aleasă de utilizator este salvată în <strong>localstorage</strong> care, în browserul Chrome, nu are
+				dată de expirare. Culoarea de fundal, precum și etichetele graficelor se modifică în funcție de tema selectată.
+			</p>
+
+			<figure typeof="sa:Image">
+				<img src="images/6.png">
+				<figcaption>
+					Componenta Settings, subcomponenta Excluded domains
+				</figcaption>
+			</figure>
+
+			<p>
+				Utilizatorul poate introduce o serie de domenii pe care nu dorește să le vadă în grafice. Acestea sunt
+				salvate, de asemenea,
+				în localstorage</strong>, care este consultat de fiecare dată când se redeseneaza un grafic.
+			</p>
+
+		</section>
+
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Testare</h2>
+			<p>
+				În ceea ce privește testarea, fiecare schimbare din cod a fost testată manual în environmentul de dezvoltare
+				și în cel de producție.
+			</p>
+			<p>
+				Dat fiind că aplicația reprezintă o extensie pentru browserul Chrome, testarea s-a făcut
+				doar pe acesta. Am urmărit ca aplicația să fie și mobile friendly (spre exemplu, meniul lateral este un
+				dropdown
+				pentru telefoanele mobile).
+			</p>
+
+		</section>
+
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Exploatarea soluției</h2>
+
+			<p> HiVi este o extensie de browser Web, dezvoltată în particular pentrul browseul Chrome, capabilă să ofere
+				utilizatorului maniere multiple de vizualizare a adreselor web favorite. Pentru această, adresele web sunt extrase din
+				salvările utilizatorului, adică din "chrome://bookmarks/".
+			</p>
+
+			<h4>Views</h4>
+			<figure typeof="sa:Image">
+				<img src="images/1.png">
+				<figcaption>
+					Componenta Views, subcomponenta Pie-chart
+				</figcaption>
+			</figure>
+
+			<p>
+				Pagină dedicată reprezentărilor grafice se găsește la url-ul terminat în <strong>"/views"</strong>.
+				Selectarea manierei curente de vizualizare se face prin meniul lateral (în varianta desktop), prin simpla
+				alegere a uneia dintre cele 3 reprezentări minimale ale opțiunilor, respectiv meniul dropdown (variantă
+				mobile-friendly).
+			</p>
+			<ul>
+				<li>
+					O prima manieră de vizualizare este cea de <strong>"list view"</strong>. Folderele sunt grupate într-o listă care, odată
+					accesată, se extinde într-o colecție de elemente, unde fiecare element reprezintă un site individual din
+					cele favorite, care poate fi accesat într-un new tab, tot prin click.
+				</li>
+				<br>
+				<li>
+					A două manieră este dată de <strong>"bar-chart"</strong>. Aceasta are în plus, față de "list view", opțiunea dedicată
+					filtrării linkurilor de la bookmarks în funcție de data adăugării. Pentru aceasta, poate alege una din cele
+					patru setări de filtrare prestabilite: "Today", "Last week", "Last month", respectiv "All time". De
+					asemenea, poate alege să salveze local diagramele, folosindu-se de butonul de export din dreaptă jos a
+					ecranului. Prin click sau hover deasupra acestui buton, utilizatorul primește opțiunile de exportare a
+					diagramei în formatele PNG și SVG. Pentru că datele să fie ușor de interpretata, am limitat numărul maxim de
+					linkuri randate la 10. Tot în același scop, ele sunt ordonate descrescător după numărul de bookmark-uri
+					făcute asupra aceluiași domeniu.
+				</li>
+				<br>
+				<li>
+					O a treia manieră de vizualizare este cea de <strong>"pie-chart"</strong>. Există aceeași restricție a numărului de linkuri
+					randate (maximul este tot 10).
+					Se păstrează opțiunea de filtrare după data și cea de salvare a diagramelor în sistemul local de fișiere.
+				</li>
+			</ul>
+
+			<h4>Settings</h4>
+
+			<figure typeof="sa:Image">
+				<img src="images/5.png">
+				<figcaption>
+					Componenta Settings
+				</figcaption>
+			</figure>
+
+			<p>
+				Extensia web oferă suport pentru customizarea interfeței cu utilizatorul. Pentru această, se va folosi de
+				pagină "/settings", unde poate ajunge prin butonul dedicat din colțul din dreapta sus. Partea de jos a
+				ecranului este data de două pictograme, care reprezintă setări prestabilite de schimbare a cromaticii, ce
+				acoperă 2 teme: "deschis"(LIGHT THEME) și "închis" (DARK THEME).
+			</p>
+
+			<figure typeof="sa:Image">
+				<img src="images/9.png">
+				<figcaption>
+					Componenta Views cu tema cromatică închisă
+				</figcaption>
+			</figure>
+
+			<p>
+				Tot în pagina de setări, utilizatorul poate formula o lista de domenii care să fie excluse din
+				reprezentările grafice de pe pagina "/views". Lista poate fi ușor modificată, prin adăugarea și ștergerea de
+				link-uri. Un efect asemanatror îl are apăsarea url-ului din diagramele de "pie-chart" și "bar-chart":
+				acțiunea face excluderea până la următorul click a elementului selectat din diagrama.
+
+				Pentru revenirea la pagină de "/views", utilizatorul se poate folosi de butonul etichetată cu "Back".
+			</p>
+		</section>
+
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Versionare</h2>
+			<p>
+				Am folosit <strong>GitHub</strong> pe post de serviciu de hosting al proiectului. Am utilizat
+				utilitarul Git din terminal
+				pentru a rezolva conflictele și pentru a face modicări/ adăugări/ ștergeri
+				a unui sau a mai multor fișiere din cadrul repository-ului. Am ales să
+				atasăm fiecărui commit un mesaj scurt si clar.
+			</p>
+		</section>
+
+		<section typeof="sa:ReferenceList" id="references">
+			<h2>Resurse</h2>
+			<dl>
+
+				<dt>Chrome API</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://developer.chrome.com/extensions/bookmarks">
+				<cite property="schema:name"><a
+					href="https://developer.chrome.com/extensions/bookmarks">Chrome API for Javascript</a></cite>
+				</dd>
+
+				<dt>Schema org</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="http://schema.org/docs/gs.html">
+				<cite property="schema:name"><a
+					href="http://schema.org/docs/gs.html">Schema org</a></cite>
+				</dd>
+
+				<dt>Building a Chrome Extension</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://developer.chrome.com/extensions/getstarted">
+				<cite property="schema:name"><a
+					href="https://developer.chrome.com/extensions/getstarted">Building a Chrome Extension</a></cite>
+				</dd>
+
+				<dt>Video recorder Chrome Extension</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://chrome.google.com/webstore/detail/hippo-video-free-screen-v/cijidiollmnkegoghpfobabpecdkeiah">
+				<cite property="schema:name"><a
+					href="https://chrome.google.com/webstore/detail/hippo-video-free-screen-v/cijidiollmnkegoghpfobabpecdkeiah">Hippo Video</a></cite>
+				</dd>
+
+				<dt>Moqups</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://moqups.com/">
+				<cite property="schema:name"><a
+					href="https://moqups.com/">Moqups</a></cite>
+				</dd>
+
+				<dt>DAWNC site</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://profs.info.uaic.ro/~busaco/">
+				<cite property="schema:name"><a
+					href="https://profs.info.uaic.ro/~busaco/">DAWNC site</a></cite>
+				</dd>
+
+				<dt>Scholarly HTML</dt>
+				<dd typeof="schema:ScholarlyArticle" itemprop="url"
+				resource="https://w3c.github.io/scholarly-html/">
+				<cite property="schema:name"><a
+					href="https://w3c.github.io/scholarly-html/">Scholarly HTML</a></cite>
+				</dd>
+
+			</dl>
+		</section>
+
+	</article>
+
+	<footer>
+		<div itemscope style="position: relative;">
+			<div style="float: left;" itemprop="faculty-course-name">
+				<p>DAWNC</p>
+			</div>
+			<time style="float: right; padding-top: 10px; padding-right: 10px" itemprop="date" datetime="2018-01-01">January, 2018</time>
+		</div>
+	</footer>
+
 </body>
 </html>

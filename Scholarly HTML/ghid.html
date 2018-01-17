@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>HiVi - Scholarly Raport</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="http://scholarly.vernacular.io/scholarly.css">
+	<script src="node_modules/prismjs/prism.js" defer></script>
+</head>
+
+<body prefix="schema: http://schema.org/ xsd: http://www.w3.org/2001/XMLSchema# sa: https://ns.science.ai/">
+
+	<header><p class="title">HiVi - Scholary Raport</p></header>
+	<article id="what" typeof="schema:ScholarlyArticle" resource="#">
+
+		<h1>HiVi</h1>
+
+		<section>
+			<ol>
+				<li property="schema:author" typeof="sa:ContributorRole">
+					<a property="schema:author" href="https://github.com/DeniseGoldan" typeof="schema:Person">
+						<span property="schema:givenName">Denise</span>
+						<span property="schema:familyName">Goldan</span>
+					</a>
+					<a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+					<sup property="sa:roleContactPoint" typeof="schema:ContactPoint">
+					</sup>
+				</li>
+				<li property="schema:contributor" typeof="sa:ContributorRole">
+					<a property="schema:contributor" href="https://github.com/CristinaNegrutu" typeof="schema:Person">
+						<span property="schema:givenName">Cristina</span>
+						<span property="schema:familyName">Negruțu</span>
+					</a>
+					<a href="#scienceai" property="sa:roleAffiliation" resource="http://science.ai/"></a>
+				</li>
+			</ol>
+			<ol>
+				<a href="https://www.info.uaic.ro/bin/Main/">
+					<span property="schema:name">Facultatea de Informatică Iași, Universitatea "Alexandru Ioan Cuza"</span>
+				</a>
+			</ol>
+		</section>
+
+		<section typeof="sa:MaterialsAndMethods">
+			<h2>Ghidul utilizatorului</h2>
+
+			<p> HiVi este o extensie de browser Web, dezvoltată în particular pentrul browseul Chrome, capabilă să ofere
+				utilizatorului maniere multiple de vizualizare a adreselor web favorite. Pentru această, adresele web sunt extrase din
+				salvările utilizatorului, adică din "chrome://bookmarks/".
+			</p>
+
+			<h4>Views</h4>
+			<figure typeof="sa:Image">
+				<img src="images/1.png">
+				<figcaption>
+					Componenta Views, subcomponenta Pie-chart
+				</figcaption>
+			</figure>
+
+			<p>
+				Pagină dedicată reprezentărilor grafice se găsește la url-ul terminat în <strong>"/views"</strong>.
+				Selectarea manierei curente de vizualizare se face prin meniul lateral (în varianta desktop), prin simpla
+				alegere a uneia dintre cele 3 reprezentări minimale ale opțiunilor, respectiv meniul dropdown (variantă
+				mobile-friendly).
+			</p>
+			<ul>
+				<li>
+					O prima manieră de vizualizare este cea de <strong>"list view"</strong>. Folderele sunt grupate într-o listă care, odată
+					accesată, se extinde într-o colecție de elemente, unde fiecare element reprezintă un site individual din
+					cele favorite, care poate fi accesat într-un new tab, tot prin click.
+				</li>
+				<br>
+				<li>
+					A două manieră este dată de <strong>"bar-chart"</strong>. Aceasta are în plus, față de "list view", opțiunea dedicată
+					filtrării linkurilor de la bookmarks în funcție de data adăugării. Pentru aceasta, poate alege una din cele
+					patru setări de filtrare prestabilite: "Today", "Last week", "Last month", respectiv "All time". De
+					asemenea, poate alege să salveze local diagramele, folosindu-se de butonul de export din dreaptă jos a
+					ecranului. Prin click sau hover deasupra acestui buton, utilizatorul primește opțiunile de exportare a
+					diagramei în formatele PNG și SVG. Pentru că datele să fie ușor de interpretata, am limitat numărul maxim de
+					linkuri randate la 10. Tot în același scop, ele sunt ordonate descrescător după numărul de bookmark-uri
+					făcute asupra aceluiași domeniu.
+				</li>
+				<br>
+				<li>
+					O a treia manieră de vizualizare este cea de <strong>"pie-chart"</strong>. Există aceeași restricție a numărului de linkuri
+					randate (maximul este tot 10).
+					Se păstrează opțiunea de filtrare după data și cea de salvare a diagramelor în sistemul local de fișiere.
+				</li>
+			</ul>
+
+			<h4>Settings</h4>
+
+			<figure typeof="sa:Image">
+				<img src="images/5.png">
+				<figcaption>
+					Componenta Settings
+				</figcaption>
+			</figure>
+
+			<p>
+				Extensia web oferă suport pentru customizarea interfeței cu utilizatorul. Pentru această, se va folosi de
+				pagină "/settings", unde poate ajunge prin butonul dedicat din colțul din dreapta sus. Partea de jos a
+				ecranului este data de două pictograme, care reprezintă setări prestabilite de schimbare a cromaticii, ce
+				acoperă 2 teme: "deschis"(LIGHT THEME) și "închis" (DARK THEME).
+			</p>
+
+			<figure typeof="sa:Image">
+				<img src="images/7.png">
+				<figcaption>
+					Componenta Settings, subcomponenta Themes
+				</figcaption>
+			</figure>
+
+			<figure typeof="sa:Image">
+				<img src="images/9.png">
+				<figcaption>
+					Componenta Views cu tema cromatică închisă
+				</figcaption>
+			</figure>
+
+			<p>
+				Tot în pagina de setări, utilizatorul poate formula o lista de domenii care să fie excluse din
+				reprezentările grafice de pe pagina "/views". Lista poate fi ușor modificată, prin adăugarea și ștergerea de
+				link-uri. Un efect asemanatror îl are apăsarea url-ului din diagramele de "pie-chart" și "bar-chart":
+				acțiunea face excluderea până la următorul click a elementului selectat din diagrama.
+
+				Pentru revenirea la pagină de "/views", utilizatorul se poate folosi de butonul etichetată cu "Back".
+			</p>
+		</section>
+
+
+	</article>
+
+	<footer>
+		<div itemscope style="position: relative;">
+			<div style="float: left;" itemprop="faculty-course-name">
+				<p>DAWNC</p>
+			</div>
+			<time style="float: right; padding-top: 10px; padding-right: 10px" itemprop="date" datetime="2018-01-01">January, 2018</time>
+		</div>
+	</footer>
+
+</body>
+</html>

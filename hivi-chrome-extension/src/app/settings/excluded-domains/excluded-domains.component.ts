@@ -9,8 +9,7 @@ export class ExcludedDomainsComponent implements OnInit {
 
   public excludedDomains: string[];
 
-  constructor(private domainsService: ExcludedDomainsService) {
-  }
+  constructor(private domainsService: ExcludedDomainsService) {}
 
   ngOnInit() {
     this.excludedDomains = this.getExcludedDomains();
